@@ -1,0 +1,9 @@
+C:\Users\sunn2\Documents\Diplom\.mono\temp\bin\Debug\TraumaForms.dll
+C:\Users\sunn2\Documents\Diplom\.mono\temp\bin\Debug\TraumaForms.pdb
+C:\Users\sunn2\Documents\Diplom\.mono\temp\obj\Debug\TraumaForms.csproj.AssemblyReference.cache
+C:\Users\sunn2\Documents\Diplom\.mono\temp\obj\Debug\TraumaForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sunn2\Documents\Diplom\.mono\temp\obj\Debug\TraumaForms.AssemblyInfoInputs.cache
+C:\Users\sunn2\Documents\Diplom\.mono\temp\obj\Debug\TraumaForms.AssemblyInfo.cs
+C:\Users\sunn2\Documents\Diplom\.mono\temp\obj\Debug\TraumaForms.csproj.CoreCompileInputs.cache
+C:\Users\sunn2\Documents\Diplom\.mono\temp\obj\Debug\TraumaForms.dll
+C:\Users\sunn2\Documents\Diplom\.mono\temp\obj\Debug\TraumaForms.pdb

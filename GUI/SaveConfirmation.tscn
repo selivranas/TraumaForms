@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Source/right2.png" type="Texture" id=1]
+[ext_resource path="res://Source/OpenSans-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GUI/SaveConfirmation.gd" type="Script" id=3]
+
+[sub_resource type="Theme" id=1]
+Label/colors/font_color_shadow = Color( 0.384314, 0.384314, 0.384314, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 34
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -55.0
+margin_right = 180.0
+margin_bottom = 55.0
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 1 )
+color = Color( 0.92549, 0.788235, 0.705882, 1 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+border_width = 1.5
+editor_only = false
+
+[node name="Control" type="Control" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="ColorRect/Control"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -279.0
+margin_top = -23.5
+margin_right = -25.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Файл сохранен"
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 21.0
+margin_top = -32.0
+margin_right = 85.0
+margin_bottom = 32.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,5459 @@
+[gd_scene load_steps=62 format=2]
+
+[ext_resource path="res://Source/nice.png" type="Texture" id=1]
+[ext_resource path="res://Source/OpenSans-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Source/Button/btn_small_dark.png" type="Texture" id=3]
+[ext_resource path="res://Source/Button/btn_small.png" type="Texture" id=4]
+[ext_resource path="res://Source/Button/btn_small_light.png" type="Texture" id=5]
+[ext_resource path="res://Source/OpenSans-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Main_font.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Forms/DASH.gd" type="Script" id=8]
+[ext_resource path="res://GUI/Options.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=48]
+size = 22
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=49]
+size = 36
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 14
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=56]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 3.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.917647, 0.85098, 0.678431, 0.639216 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.960784, 0.945098, 0.894118, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxEmpty" id=12]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=52]
+bg_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=53]
+bg_color = Color( 0.490196, 0.670588, 0.321569, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=54]
+bg_color = Color( 0.2, 0.360784, 0.0588235, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=55]
+bg_color = Color( 0.847059, 0.772549, 0.576471, 1 )
+border_width_left = 10
+border_width_top = 5
+border_width_bottom = 5
+border_color = Color( 0.847059, 0.772549, 0.576471, 1 )
+
+[sub_resource type="Theme" id=20]
+VScrollBar/styles/grabber = SubResource( 52 )
+VScrollBar/styles/grabber_highlight = SubResource( 53 )
+VScrollBar/styles/grabber_pressed = SubResource( 54 )
+VScrollBar/styles/scroll = SubResource( 55 )
+VScrollBar/styles/scroll_focus = null
+
+[sub_resource type="StyleBoxEmpty" id=9]
+content_margin_left = 83.0
+content_margin_right = 70.0
+content_margin_top = 10.0
+content_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxEmpty" id=13]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxFlat" id=60]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.270588, 0.439216, 0.117647, 0.745098 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=62]
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.384314, 0.384314, 0.384314, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="Theme" id=58]
+CheckBox/styles/focus = SubResource( 60 )
+TooltipPanel/styles/panel = SubResource( 62 )
+
+[sub_resource type="DynamicFont" id=61]
+size = 10
+font_data = ExtResource( 2 )
+
+[sub_resource type="ButtonGroup" id=2]
+
+[sub_resource type="ButtonGroup" id=14]
+
+[sub_resource type="ButtonGroup" id=15]
+
+[sub_resource type="ButtonGroup" id=16]
+
+[sub_resource type="ButtonGroup" id=21]
+
+[sub_resource type="ButtonGroup" id=22]
+
+[sub_resource type="ButtonGroup" id=23]
+
+[sub_resource type="ButtonGroup" id=24]
+
+[sub_resource type="ButtonGroup" id=25]
+
+[sub_resource type="ButtonGroup" id=26]
+
+[sub_resource type="ButtonGroup" id=27]
+
+[sub_resource type="ButtonGroup" id=28]
+
+[sub_resource type="ButtonGroup" id=29]
+
+[sub_resource type="ButtonGroup" id=30]
+
+[sub_resource type="ButtonGroup" id=31]
+
+[sub_resource type="ButtonGroup" id=32]
+
+[sub_resource type="ButtonGroup" id=33]
+
+[sub_resource type="ButtonGroup" id=34]
+
+[sub_resource type="ButtonGroup" id=35]
+
+[sub_resource type="ButtonGroup" id=36]
+
+[sub_resource type="ButtonGroup" id=37]
+
+[sub_resource type="ButtonGroup" id=38]
+
+[sub_resource type="ButtonGroup" id=39]
+
+[sub_resource type="DynamicFont" id=51]
+size = 14
+font_data = ExtResource( 6 )
+
+[sub_resource type="ButtonGroup" id=40]
+
+[sub_resource type="ButtonGroup" id=41]
+
+[sub_resource type="ButtonGroup" id=42]
+
+[sub_resource type="ButtonGroup" id=43]
+
+[sub_resource type="ButtonGroup" id=44]
+
+[sub_resource type="ButtonGroup" id=45]
+
+[sub_resource type="ButtonGroup" id=46]
+
+[sub_resource type="DynamicFont" id=5]
+size = 36
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=59]
+bg_color = Color( 0.917647, 0.85098, 0.678431, 0.639216 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="DynamicFont" id=10]
+size = 14
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxEmpty" id=11]
+content_margin_left = 70.0
+content_margin_right = 70.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+
+[node name="DASH" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 31.0 ],
+"_edit_vertical_guides_": [ 50.0, 976.0 ]
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Label" type="Label" parent="TextureRect2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -86.5
+margin_top = 35.0
+margin_right = 86.5
+margin_bottom = 66.0
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 48 )
+text = "DASH"
+align = 1
+valign = 1
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect2"]
+margin_left = 50.0
+margin_top = 30.0
+margin_right = 250.0
+margin_bottom = 110.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 5 )
+expand = true
+
+[node name="Label" type="Label" parent="TextureRect2/TextureButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -61.0
+margin_top = -25.0
+margin_right = 61.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0.733333, 0.231373, 0.054902, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "Назад"
+align = 1
+valign = 1
+
+[node name="TextureButton2" type="TextureButton" parent="TextureRect2"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -148.0
+margin_top = 30.0
+margin_right = 52.0
+margin_bottom = 110.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 5 )
+expand = true
+
+[node name="Label" type="Label" parent="TextureRect2/TextureButton2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.5
+margin_top = -25.0
+margin_right = 64.5
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0.733333, 0.231373, 0.054902, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "Опции"
+align = 1
+valign = 1
+
+[node name="FieldFullname" type="Control" parent="."]
+margin_left = 51.0
+margin_top = 96.0
+margin_right = 536.0
+margin_bottom = 131.0
+
+[node name="TextFullname" type="Label" parent="FieldFullname"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -8.5
+margin_right = 84.0
+margin_bottom = 8.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Введите ФИО:"
+
+[node name="InputFullname" type="LineEdit" parent="FieldFullname"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -380.0
+margin_top = -15.0
+margin_bottom = 15.0
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+custom_styles/focus = SubResource( 56 )
+custom_styles/normal = SubResource( 8 )
+
+[node name="TableHeader" type="Control" parent="."]
+visible = false
+anchor_left = 0.0683594
+anchor_top = 0.353333
+anchor_right = 0.916992
+anchor_bottom = 0.44
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TableHeader"]
+anchor_left = 0.0161105
+anchor_right = 1.01036
+anchor_bottom = 0.903846
+margin_left = -9.53674e-07
+margin_right = -6.10352e-05
+margin_bottom = -7.0
+
+[node name="Header1" type="Label" parent="TableHeader/HBoxContainer"]
+margin_top = 13.0
+margin_right = 351.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 7 )
+align = 1
+valign = 1
+
+[node name="Header2" type="Label" parent="TableHeader/HBoxContainer"]
+margin_left = 355.0
+margin_top = 11.0
+margin_right = 454.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.28
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 12 )
+text = "Нетрудно"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Header3" type="Label" parent="TableHeader/HBoxContainer"]
+margin_left = 458.0
+margin_right = 556.0
+margin_bottom = 47.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.28
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 12 )
+text = "Немного трудно"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Header4" type="Label" parent="TableHeader/HBoxContainer"]
+margin_left = 560.0
+margin_right = 659.0
+margin_bottom = 47.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.28
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 12 )
+text = "Умеренно трудно"
+align = 1
+autowrap = true
+
+[node name="Header5" type="Label" parent="TableHeader/HBoxContainer"]
+margin_left = 663.0
+margin_right = 761.0
+margin_bottom = 47.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.28
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 12 )
+text = "Очень трудно"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Header6" type="Label" parent="TableHeader/HBoxContainer"]
+margin_left = 765.0
+margin_top = 11.0
+margin_right = 864.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.28
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 12 )
+text = "Невозможно"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_top = 0.44
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -55.0
+size_flags_horizontal = 3
+theme = SubResource( 20 )
+custom_styles/bg = SubResource( 9 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_left = 83.0
+margin_top = 10.0
+margin_right = 948.0
+margin_bottom = 2278.0
+size_flags_horizontal = 3
+
+[node name="TableHeader" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_right = 865.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/TableHeader"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/TableHeader"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/TableHeader/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/TableHeader/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/TableHeader/Control/HBoxContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Нетрудно"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/TableHeader/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/TableHeader/Control/HBoxContainer/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Немного трудно"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/TableHeader/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/TableHeader/Control/HBoxContainer/Control3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Умеренно трудно"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/TableHeader/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/TableHeader/Control/HBoxContainer/Control4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Очень 
+трудно"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/TableHeader/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/TableHeader/Control/HBoxContainer/Control5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Невозможно"
+align = 1
+valign = 1
+
+[node name="Question1" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 54.0
+margin_right = 865.0
+margin_bottom = 114.0
+rect_min_size = Vector2( 865, 60 )
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question1"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "1. Открыть плотно закрытую или новую банку с резьбовой крышкой"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question1"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question1/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 7
+theme = SubResource( 58 )
+custom_fonts/font = SubResource( 61 )
+group = SubResource( 2 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 7
+theme = SubResource( 58 )
+group = SubResource( 2 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 7
+theme = SubResource( 58 )
+group = SubResource( 2 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 7
+theme = SubResource( 58 )
+group = SubResource( 2 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 7
+theme = SubResource( 58 )
+group = SubResource( 2 )
+align = 1
+
+[node name="Question2" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 118.0
+margin_right = 865.0
+margin_bottom = 168.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question2"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "2. Писать"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question2/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 14 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 14 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 14 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 14 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 14 )
+align = 1
+
+[node name="Question3" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 172.0
+margin_right = 865.0
+margin_bottom = 222.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question3"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "3. Отпирать дверь ключом"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question3"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question3/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 15 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 15 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 15 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 15 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 15 )
+align = 1
+
+[node name="Question4" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 226.0
+margin_right = 865.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question4"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "4. Готовить пищу"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question4"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question4/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 16 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 16 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 16 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 16 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 16 )
+align = 1
+
+[node name="Question5" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 280.0
+margin_right = 865.0
+margin_bottom = 330.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question5"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "5. Толкая открыть тяжелую дверь"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question5"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question5/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 21 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 21 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 21 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 21 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 21 )
+align = 1
+
+[node name="Question6" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 334.0
+margin_right = 865.0
+margin_bottom = 384.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question6"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "6. Положить на полку предмет выше головы"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question6"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question6/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 22 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 22 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 22 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 22 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 22 )
+align = 1
+
+[node name="Question7" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 388.0
+margin_right = 865.0
+margin_bottom = 438.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question7"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "7. Делать тяжелые домашние хоз. работы (например, мыть окна)"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question7"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question7/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 23 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 23 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 23 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 23 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 23 )
+align = 1
+
+[node name="Question8" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 442.0
+margin_right = 865.0
+margin_bottom = 492.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question8"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "8. Ухаживать за садом или двором"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question8"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question8/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 24 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 24 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 24 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 24 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 24 )
+align = 1
+
+[node name="Question9" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 496.0
+margin_right = 865.0
+margin_bottom = 546.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question9"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "9. Накрыть постель"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question9"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question9/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 25 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 25 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 25 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 25 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 25 )
+align = 1
+
+[node name="Question10" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 550.0
+margin_right = 865.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question10"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "10. Нести хозяйственную сумку или портфель"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question10"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question10/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 26 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 26 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 26 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 26 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 26 )
+align = 1
+
+[node name="Question11" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 604.0
+margin_right = 865.0
+margin_bottom = 654.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question11"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "11. Нести тяжелый предмет ( > 5 кг.)"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question11"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question11/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 27 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 27 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 27 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 27 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 27 )
+align = 1
+
+[node name="Question12" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 658.0
+margin_right = 865.0
+margin_bottom = 708.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question12"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "12. Заменить лампочку на потолке"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question12"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question12/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 28 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 28 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 28 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 28 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 28 )
+align = 1
+
+[node name="Question13" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 712.0
+margin_right = 865.0
+margin_bottom = 762.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question13"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "13. Мыть или сушить волосы"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question13"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question13/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 29 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 29 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 29 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 29 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 29 )
+align = 1
+
+[node name="Question14" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 766.0
+margin_right = 865.0
+margin_bottom = 816.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question14"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "14. Мыть спину"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question14"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question14/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 30 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 30 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 30 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 30 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 30 )
+align = 1
+
+[node name="Question15" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 820.0
+margin_right = 865.0
+margin_bottom = 870.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question15"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "15. Надеть свитер"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question15"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question15/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 31 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 31 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 31 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 31 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 31 )
+align = 1
+
+[node name="Question16" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 874.0
+margin_right = 865.0
+margin_bottom = 924.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question16"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "16. Резать ножом продукты"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question16"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question16/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 32 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 32 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 32 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 32 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 32 )
+align = 1
+
+[node name="Question17" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 928.0
+margin_right = 865.0
+margin_bottom = 988.0
+rect_min_size = Vector2( 865, 60 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question17"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "17. Действия или занятия, не требующие большого усилия (игра в карты, вязание)"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question17"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question17/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 33 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 33 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 33 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 33 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 33 )
+align = 1
+
+[node name="Question18" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 992.0
+margin_right = 865.0
+margin_bottom = 1052.0
+rect_min_size = Vector2( 865, 60 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question18"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "18. Действия или занятия, требующие усилия (подметание, работа молотком)"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question18"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question18/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 34 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 34 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 34 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 34 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 34 )
+align = 1
+
+[node name="Question19" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1056.0
+margin_right = 865.0
+margin_bottom = 1116.0
+rect_min_size = Vector2( 865, 60 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question19"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -25.0
+margin_right = 375.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 50 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "19. Действия или занятия, при которых Вы свободно перемещаете вашу руку (напр. игра в бадминтон)"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question19"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -37.5
+margin_right = -11.0
+margin_bottom = 32.5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question19/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 70.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 35 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 35 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 35 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 35 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 35 )
+align = 1
+
+[node name="Question20" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1120.0
+margin_right = 865.0
+margin_bottom = 1180.0
+rect_min_size = Vector2( 865, 60 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question20"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "20. Управление автомобилем, езда в общественном транспорте"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question20"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question20/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 36 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 36 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 36 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 36 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 36 )
+align = 1
+
+[node name="Question21" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1184.0
+margin_right = 865.0
+margin_bottom = 1234.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question21"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "21. Половые действия"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question21"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question21/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 37 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 37 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 37 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 37 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 37 )
+align = 1
+
+[node name="Header2" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1238.0
+margin_right = 865.0
+margin_bottom = 1288.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Header2"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Header2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Header2/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Header2/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header2/Control/HBoxContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Нисколько"
+align = 1
+valign = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Header2/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header2/Control/HBoxContainer/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Немного"
+align = 1
+valign = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Header2/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header2/Control/HBoxContainer/Control3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Умеренно"
+align = 1
+valign = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Header2/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header2/Control/HBoxContainer/Control4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Сильно"
+align = 1
+valign = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Header2/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header2/Control/HBoxContainer/Control5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Чрезвычайно"
+align = 1
+valign = 1
+
+[node name="Question22" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1292.0
+margin_right = 865.0
+margin_bottom = 1372.0
+rect_min_size = Vector2( 865, 80 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question22"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -35.0
+margin_right = 391.0
+margin_bottom = 35.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "22. В какой степени проблема вашей руки ограничивала Вас в вашей обычной общественной жизни на прошлой неделе?"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question22"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question22/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нисколько, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 38 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 38 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 38 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Сильно, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 38 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Чрезвычайно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 38 )
+align = 1
+
+[node name="Header3" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1376.0
+margin_right = 865.0
+margin_bottom = 1426.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Header3"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Header3"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Header3/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Header3/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header3/Control/HBoxContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Без ограничений"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Header3/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header3/Control/HBoxContainer/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Немного"
+align = 1
+valign = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Header3/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header3/Control/HBoxContainer/Control3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Умеренно"
+align = 1
+valign = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Header3/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header3/Control/HBoxContainer/Control4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Очень"
+align = 1
+valign = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Header3/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header3/Control/HBoxContainer/Control5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Неспособен"
+align = 1
+valign = 1
+
+[node name="Question23" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1430.0
+margin_right = 865.0
+margin_bottom = 1510.0
+rect_min_size = Vector2( 865, 80 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question23"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -35.0
+margin_right = 371.0
+margin_bottom = 35.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "23. Были ли Вы ограничены в вашей работе или других ежедневных занятиях из-за проблемы вашей руки "
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question23"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question23/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Без ограничений, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 39 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 39 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 39 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 39 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Неспособен, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 39 )
+align = 1
+
+[node name="Header4" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1514.0
+margin_right = 865.0
+margin_bottom = 1564.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Header4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+custom_fonts/font = SubResource( 51 )
+custom_styles/normal = SubResource( 13 )
+text = "Пожалуйста оцените серьезность следующих признаков за прошедшую неделю:"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Header5" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1568.0
+margin_right = 865.0
+margin_bottom = 1618.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Header5"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Header5"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Header5/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Header5/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header5/Control/HBoxContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Нет"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Header5/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header5/Control/HBoxContainer/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Немного"
+align = 1
+valign = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Header5/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header5/Control/HBoxContainer/Control3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Умеренно"
+align = 1
+valign = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Header5/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header5/Control/HBoxContainer/Control4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Очень"
+align = 1
+valign = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Header5/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header5/Control/HBoxContainer/Control5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Чрезвычайно"
+align = 1
+valign = 1
+
+[node name="Question24" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1622.0
+margin_right = 865.0
+margin_bottom = 1672.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question24"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "24. Боль в плече, предплечье, или кисти"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question24"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question24/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нет, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 40 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 40 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 40 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 40 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Чрезвычайно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 40 )
+align = 1
+
+[node name="Question25" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1676.0
+margin_right = 865.0
+margin_bottom = 1736.0
+rect_min_size = Vector2( 865, 60 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question25"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "25. Боль в руке при выполнении той или иной работы"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question25"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question25/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нет, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 41 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 41 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 41 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 41 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Чрезвычайно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 41 )
+align = 1
+
+[node name="Question26" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1740.0
+margin_right = 865.0
+margin_bottom = 1790.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question26"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "26. Покалывание (мурашки в руке)"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question26"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question26/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нет, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 42 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 42 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 42 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 42 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Чрезвычайно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 42 )
+align = 1
+
+[node name="Question27" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1794.0
+margin_right = 865.0
+margin_bottom = 1844.0
+rect_min_size = Vector2( 865, 50 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question27"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "27. Слабость в руке"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question27"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question27/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нет, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 43 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 43 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 43 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 43 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Чрезвычайно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 43 )
+align = 1
+
+[node name="Question28" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1848.0
+margin_right = 865.0
+margin_bottom = 1908.0
+rect_min_size = Vector2( 865, 60 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question28"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "28. Тугоподвижность плеча, предплечья или кисти"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question28"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question28/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нет, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 44 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Немного, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 44 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 44 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 44 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Чрезвычайно, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 44 )
+align = 1
+
+[node name="Header6" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1912.0
+margin_right = 865.0
+margin_bottom = 1982.0
+rect_min_size = Vector2( 865, 70 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Header6"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Header6"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -35.0
+margin_right = -11.0
+margin_bottom = 35.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Header6/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 10.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Header6/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 70.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header6/Control/HBoxContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Нетрудно"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Header6/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header6/Control/HBoxContainer/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Настолько трудно, что не могу спать"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Header6/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header6/Control/HBoxContainer/Control3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Умеренно"
+align = 1
+valign = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Header6/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header6/Control/HBoxContainer/Control4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Очень"
+align = 1
+valign = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Header6/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header6/Control/HBoxContainer/Control5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Неспособен"
+align = 1
+valign = 1
+
+[node name="Question29" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 1986.0
+margin_right = 865.0
+margin_bottom = 2046.0
+rect_min_size = Vector2( 865, 60 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question29"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "29. Насколько трудно было спать из-за боли в руке в течение прошедшей недели"
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question29"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question29/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 45 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Настолько трудно,
+что не могу спать, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 45 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Умеренно, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 45 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Очень, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 45 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Неспособен, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 45 )
+align = 1
+
+[node name="Header7" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2050.0
+margin_right = 865.0
+margin_bottom = 2120.0
+rect_min_size = Vector2( 865, 70 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Header7"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -23.5
+margin_right = 351.0
+margin_bottom = 23.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Header7"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -35.0
+margin_right = -11.0
+margin_bottom = 35.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Header7/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Header7/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 70.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header7/Control/HBoxContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Строго не согласен"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Header7/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header7/Control/HBoxContainer/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Не согласен"
+align = 1
+valign = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Header7/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header7/Control/HBoxContainer/Control3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Ни согласен, ни не согласен"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Header7/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header7/Control/HBoxContainer/Control4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Согласен"
+align = 1
+valign = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Header7/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="Header1" type="Label" parent="ScrollContainer/VBoxContainer/Header7/Control/HBoxContainer/Control5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Строго согласен"
+align = 1
+valign = 1
+
+[node name="Question30" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2124.0
+margin_right = 865.0
+margin_bottom = 2204.0
+rect_min_size = Vector2( 865, 80 )
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Question30"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -35.0
+margin_right = 351.0
+margin_bottom = 35.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/normal = SubResource( 13 )
+text = "30. Я себя чувствую менее трудоспособным, менее уверенным или менее полезным из-за проблемы моей руки "
+valign = 1
+autowrap = true
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question30"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -20.0
+margin_right = -11.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question30/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer"]
+margin_right = 99.163
+margin_bottom = 40.0
+rect_min_size = Vector2( 99.163, 40 )
+size_flags_horizontal = 3
+
+[node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Строго не согласен, 1 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 46 )
+align = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer"]
+margin_left = 103.0
+margin_right = 201.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer/Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Не согласен, 2 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 46 )
+align = 1
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer"]
+margin_left = 205.0
+margin_right = 303.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer/Control3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Ни согласен, ни не согласен, 3 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 46 )
+align = 1
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer"]
+margin_left = 307.0
+margin_right = 405.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer/Control4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Согласен, 4 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 46 )
+align = 1
+
+[node name="Control5" type="Control" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer"]
+margin_left = 409.0
+margin_right = 507.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 98, 0 )
+
+[node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer/Control5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = -20.0
+margin_right = 12.0
+margin_bottom = 20.0
+hint_tooltip = "Строго согласен, 5 б."
+size_flags_horizontal = 3
+theme = SubResource( 58 )
+group = SubResource( 46 )
+align = 1
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer"]
+margin_top = 2208.0
+margin_right = 865.0
+margin_bottom = 2268.0
+rect_min_size = Vector2( 0, 60 )
+
+[node name="ButtonOk" type="TextureButton" parent="ScrollContainer/VBoxContainer/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -100.0
+margin_right = 100.0
+margin_bottom = 80.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 100, 30 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 5 )
+expand = true
+
+[node name="NameButtonOk" type="Label" parent="ScrollContainer/VBoxContainer/Control/ButtonOk"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.5
+margin_top = -25.0
+margin_right = 64.5
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0.733333, 0.231373, 0.054902, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Готово"
+align = 1
+
+[node name="FieldAge" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -378.0
+margin_top = 97.0
+margin_right = -53.0
+margin_bottom = 132.0
+
+[node name="TextAge" type="Label" parent="FieldAge"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 4.0
+margin_top = -8.5
+margin_right = 123.0
+margin_bottom = 11.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Введите возраст:"
+
+[node name="InputAge" type="LineEdit" parent="FieldAge"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -196.0
+margin_top = -15.0
+margin_right = 4.0
+margin_bottom = 15.0
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+custom_styles/focus = SubResource( 59 )
+custom_styles/normal = SubResource( 8 )
+
+[node name="Description" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 131.0
+margin_bottom = -389.0
+
+[node name="TextDescription" type="Label" parent="Description"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+custom_fonts/font = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+text = "Пожалуйста, оцените вашу способность делать следующие действия в течение последней недели, выбирая кружок под  соответствующим ответом."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Control2" parent="." instance=ExtResource( 9 )]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = -270.0
+margin_top = 70.0
+margin_right = -48.0
+margin_bottom = 225.0
+
+[connection signal="pressed" from="TextureRect2/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TextureRect2/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Control/ButtonOk" to="." method="_on_ButtonOk_pressed"]

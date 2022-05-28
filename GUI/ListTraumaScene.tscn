@@ -1,0 +1,129 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Source/Button/btn_small_dark.png" type="Texture" id=1]
+[ext_resource path="res://Source/Button/btn_small.png" type="Texture" id=2]
+[ext_resource path="res://Source/OpenSans-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Source/Button/btn_small_light.png" type="Texture" id=4]
+[ext_resource path="res://Source/nice.png" type="Texture" id=5]
+[ext_resource path="res://GUI/ListTraumaScene.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=52]
+bg_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=53]
+bg_color = Color( 0.490196, 0.670588, 0.321569, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=54]
+bg_color = Color( 0.2, 0.360784, 0.0588235, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=55]
+bg_color = Color( 0.847059, 0.772549, 0.576471, 1 )
+border_width_left = 10
+border_width_top = 5
+border_width_bottom = 5
+border_color = Color( 0.847059, 0.772549, 0.576471, 1 )
+
+[sub_resource type="Theme" id=20]
+VScrollBar/styles/grabber = SubResource( 52 )
+VScrollBar/styles/grabber_highlight = SubResource( 53 )
+VScrollBar/styles/grabber_pressed = SubResource( 54 )
+VScrollBar/styles/scroll = SubResource( 55 )
+VScrollBar/styles/scroll_focus = null
+
+[node name="ListTraumaForm" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_vertical_guides_": [ 35.0 ]
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="NameList" type="Label" parent="Background"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -139.0
+margin_top = 35.0
+margin_right = 139.0
+margin_bottom = 66.0
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Формы для заполнения"
+
+[node name="ButtonBack" type="TextureButton" parent="Background"]
+margin_left = 50.0
+margin_top = 30.0
+margin_right = 250.0
+margin_bottom = 110.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="ButtonName" type="Label" parent="Background/ButtonBack"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -61.0
+margin_top = -27.5
+margin_right = 61.0
+margin_bottom = 27.5
+custom_colors/font_color = Color( 0.733333, 0.231373, 0.054902, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Назад"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background"]
+anchor_top = 0.145
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 1.99999
+theme = SubResource( 20 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/ScrollContainer"]
+alignment = 1
+
+[connection signal="pressed" from="Background/ButtonBack" to="." method="_on_ButtonBack_pressed"]
