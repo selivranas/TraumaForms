@@ -55,6 +55,18 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
+[sub_resource type="StyleBoxFlat" id=59]
+bg_color = Color( 0.917647, 0.85098, 0.678431, 0.639216 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
 [sub_resource type="StyleBoxEmpty" id=12]
 content_margin_left = 2.0
 content_margin_right = 2.0
@@ -227,18 +239,6 @@ font_data = ExtResource( 6 )
 size = 36
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=59]
-bg_color = Color( 0.917647, 0.85098, 0.678431, 0.639216 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
 [sub_resource type="DynamicFont" id=10]
 size = 14
 font_data = ExtResource( 6 )
@@ -281,7 +281,7 @@ valign = 1
 margin_left = 50.0
 margin_top = 30.0
 margin_right = 250.0
-margin_bottom = 110.0
+margin_bottom = 100.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
@@ -309,7 +309,7 @@ anchor_right = 1.0
 margin_left = -148.0
 margin_top = 30.0
 margin_right = 52.0
-margin_bottom = 110.0
+margin_bottom = 100.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
@@ -359,6 +359,40 @@ custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
 custom_styles/focus = SubResource( 56 )
+custom_styles/normal = SubResource( 8 )
+
+[node name="FieldAge" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -378.0
+margin_top = 97.0
+margin_right = -53.0
+margin_bottom = 132.0
+
+[node name="TextAge" type="Label" parent="FieldAge"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 4.0
+margin_top = -8.5
+margin_right = 123.0
+margin_bottom = 11.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Введите возраст:"
+
+[node name="InputAge" type="LineEdit" parent="FieldAge"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -196.0
+margin_top = -15.0
+margin_right = 4.0
+margin_bottom = 15.0
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+custom_styles/focus = SubResource( 59 )
 custom_styles/normal = SubResource( 8 )
 
 [node name="TableHeader" type="Control" parent="."]
@@ -625,16 +659,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question1/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control"]
@@ -658,6 +695,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -679,6 +717,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -700,6 +739,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -721,6 +761,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -765,16 +806,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question2/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control"]
@@ -797,6 +841,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -818,6 +863,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -839,6 +885,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -860,6 +907,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -904,16 +952,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question3/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control"]
@@ -936,6 +987,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -957,6 +1009,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -978,6 +1031,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -999,6 +1053,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1043,16 +1098,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question4/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control"]
@@ -1075,6 +1133,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1096,6 +1155,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1117,6 +1177,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1138,6 +1199,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1182,16 +1244,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question5/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control"]
@@ -1214,6 +1279,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1235,6 +1301,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1256,6 +1323,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1277,6 +1345,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1321,16 +1390,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question6/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control"]
@@ -1353,6 +1425,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1374,6 +1447,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1395,6 +1469,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1416,6 +1491,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1460,16 +1536,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question7/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control"]
@@ -1492,6 +1571,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1513,6 +1593,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1534,6 +1615,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1555,6 +1637,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1599,16 +1682,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question8/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control"]
@@ -1631,6 +1717,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1652,6 +1739,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1673,6 +1761,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1694,6 +1783,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1738,16 +1828,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question9/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control"]
@@ -1770,6 +1863,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1791,6 +1885,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1833,6 +1928,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1877,16 +1973,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question10/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control"]
@@ -1909,6 +2008,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1930,6 +2030,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1951,6 +2052,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1972,6 +2074,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -2016,16 +2119,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question11/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control"]
@@ -2048,6 +2154,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -2069,6 +2176,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -2090,6 +2198,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -2111,6 +2220,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -2155,16 +2265,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question12/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer/Control"]
@@ -2187,6 +2300,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -2208,6 +2322,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -2229,6 +2344,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -2250,6 +2366,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question12/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -2294,16 +2411,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question13/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer/Control"]
@@ -2326,6 +2446,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -2347,6 +2468,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -2368,6 +2490,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -2389,6 +2512,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question13/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -2433,16 +2557,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question14/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer/Control"]
@@ -2465,6 +2592,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -2486,6 +2614,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -2507,6 +2636,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -2528,6 +2658,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question14/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -2572,16 +2703,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question15/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer/Control"]
@@ -2604,6 +2738,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -2625,6 +2760,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -2646,6 +2782,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -2667,6 +2804,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question15/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -2711,16 +2849,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question16/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer/Control"]
@@ -2743,6 +2884,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -2764,6 +2906,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -2785,6 +2928,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -2806,6 +2950,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question16/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -2850,16 +2995,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question17/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer/Control"]
@@ -2882,6 +3030,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -2903,6 +3052,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -2924,6 +3074,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -2945,6 +3096,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question17/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -2989,16 +3141,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question18/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer/Control"]
@@ -3021,6 +3176,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -3042,6 +3198,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -3063,6 +3220,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -3084,6 +3242,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question18/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -3129,16 +3288,19 @@ margin_left = -508.0
 margin_top = -37.5
 margin_right = -11.0
 margin_bottom = 32.5
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question19/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 70.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer/Control"]
@@ -3161,6 +3323,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -3182,6 +3345,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -3203,6 +3367,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -3224,6 +3389,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question19/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -3268,16 +3434,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question20/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer/Control"]
@@ -3300,6 +3469,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -3321,6 +3491,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -3342,6 +3513,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -3363,6 +3535,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question20/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -3407,16 +3580,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question21/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer/Control"]
@@ -3439,6 +3615,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -3460,6 +3637,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -3481,6 +3659,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -3502,6 +3681,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question21/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -3659,16 +3839,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question22/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer/Control"]
@@ -3691,6 +3874,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -3712,6 +3896,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -3733,6 +3918,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -3754,6 +3940,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question22/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -3912,16 +4099,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question23/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer/Control"]
@@ -3944,6 +4134,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -3965,6 +4156,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -3986,6 +4178,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -4007,6 +4200,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question23/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -4182,16 +4376,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question24/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer/Control"]
@@ -4214,6 +4411,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -4235,6 +4433,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -4256,6 +4455,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -4277,6 +4477,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question24/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -4321,16 +4522,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question25/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer/Control"]
@@ -4353,6 +4557,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -4374,6 +4579,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -4395,6 +4601,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -4416,6 +4623,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question25/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -4460,16 +4668,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question26/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer/Control"]
@@ -4492,6 +4703,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -4513,6 +4725,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -4534,6 +4747,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -4555,6 +4769,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question26/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -4599,16 +4814,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question27/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer/Control"]
@@ -4631,6 +4849,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -4652,6 +4871,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -4673,6 +4893,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -4694,6 +4915,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question27/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -4738,16 +4960,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question28/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer/Control"]
@@ -4770,6 +4995,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -4791,6 +5017,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -4812,6 +5039,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -4833,6 +5061,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question28/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -4993,16 +5222,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question29/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer/Control"]
@@ -5025,6 +5257,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -5047,6 +5280,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -5068,6 +5302,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -5089,6 +5324,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question29/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -5248,16 +5484,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Question30/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer/Control"]
@@ -5280,6 +5519,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -5301,6 +5541,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -5322,6 +5563,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -5343,6 +5585,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="ScrollContainer/VBoxContainer/Question30/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -5370,7 +5613,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -100.0
 margin_right = 100.0
-margin_bottom = 80.0
+margin_bottom = 70.0
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 100, 30 )
 texture_normal = ExtResource( 4 )
@@ -5391,40 +5634,6 @@ custom_colors/font_color = Color( 0.733333, 0.231373, 0.054902, 1 )
 custom_fonts/font = SubResource( 5 )
 text = "Готово"
 align = 1
-
-[node name="FieldAge" type="Control" parent="."]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -378.0
-margin_top = 97.0
-margin_right = -53.0
-margin_bottom = 132.0
-
-[node name="TextAge" type="Label" parent="FieldAge"]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 4.0
-margin_top = -8.5
-margin_right = 123.0
-margin_bottom = 11.5
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 7 )
-text = "Введите возраст:"
-
-[node name="InputAge" type="LineEdit" parent="FieldAge"]
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -196.0
-margin_top = -15.0
-margin_right = 4.0
-margin_bottom = 15.0
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 7 )
-custom_styles/focus = SubResource( 59 )
-custom_styles/normal = SubResource( 8 )
 
 [node name="Description" type="Control" parent="."]
 anchor_right = 1.0
@@ -5450,9 +5659,9 @@ anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 0.0
 margin_left = -270.0
-margin_top = 70.0
+margin_top = 64.0
 margin_right = -48.0
-margin_bottom = 225.0
+margin_bottom = 219.0
 
 [connection signal="pressed" from="TextureRect2/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="TextureRect2/TextureButton2" to="." method="_on_TextureButton2_pressed"]

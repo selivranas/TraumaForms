@@ -37,6 +37,8 @@ var chapter_12_link = ["res://Forms/Form25.tscn"]
 
 var choosing_data_row = 0
 
+var info_text = ""
+
 func _ready():
 	forms = [chapter_1, chapter_2, chapter_3, chapter_4, chapter_5, chapter_6, chapter_7, chapter_8, chapter_9, chapter_10, chapter_11, chapter_12]
 	forms_link = [chapter_1_link, chapter_2_link, chapter_3_link, chapter_4_link, chapter_5_link, chapter_6_link, chapter_7_link, chapter_8_link, chapter_9_link, chapter_10_link, chapter_11_link, chapter_12_link]

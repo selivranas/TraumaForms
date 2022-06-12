@@ -1,7 +1,7 @@
 extends Control
 
 var confirm_text = load("res://GUI/SaveConfirmation.tscn")
-
+var help_text = load("res://GUI/InformationWindow.tscn")
 onready var visible_timer = $Timer
 
 
@@ -45,10 +45,11 @@ func _on_Button_save_pressed():
 		print("Not saved")
 
 
-func _on_Button_button_pressed():
+func l_on_Button_save_pressed():
 	Global.load_file("QuickDASH")
 	print("???")
 
 
-func _on_Button_hepl_pressed():
-	print("Help")
+func _on_Button_help_pressed():
+	get_parent().add_child(help_text.instance())
+	get_parent().get_node("Info").set_text(Global.info_text)

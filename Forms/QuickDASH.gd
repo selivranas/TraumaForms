@@ -11,10 +11,35 @@ onready var check_text_info = $Control/Description/TextDescription
 var form = {}
 
 func _ready():
+	Global.info_text = "Quick DASH (Disabilities of the Arm, Shoulder and Hand) - опросник влияния синдрома карпального канала на функцию руки.\nШкала DASH неспособности/симптомов = ((сумма n ответов/n)-1)*25, где n равно количеству ответов.\nQuickDASH не может быть подсчитана, если пропущено более 1 пункта."
+	set_font(self)
 	if Global.choosing_data_row != -1:
 		pass
-	#get_viewport().connect("size_changed", self, "resized")
-	pass
+	for i in range(11):
+		var quest = get_node("Control/ScrollContainer/VBoxContainer/Question" + str(i+1))
+		var btn1 = quest.get_node("Control/HBoxContainer/Control/CheckBox1")
+		var btn2 = quest.get_node("Control/HBoxContainer/Control2/CheckBox2")
+		var btn3 = quest.get_node("Control/HBoxContainer/Control3/CheckBox2")
+		var btn4 = quest.get_node("Control/HBoxContainer/Control4/CheckBox2")
+		var btn5 = quest.get_node("Control/HBoxContainer/Control5/CheckBox2")
+		quest.set_script(preload("res://Forms/Question.gd"))
+		btn1.set_script(preload("res://Forms/CheckBoxCode.gd"))
+		btn2.set_script(preload("res://Forms/CheckBoxCode.gd"))
+		btn3.set_script(preload("res://Forms/CheckBoxCode.gd"))
+		btn4.set_script(preload("res://Forms/CheckBoxCode.gd"))
+		btn5.set_script(preload("res://Forms/CheckBoxCode.gd"))
+		quest.connect("mouse_entered", quest, "create_color_rect")
+		quest.connect("mouse_exited", quest, "close_color_rect")
+		btn1.connect("mouse_entered", btn1, "create_color_rect")
+		btn1.connect("mouse_exited", btn1, "close_color_rect")
+		btn2.connect("mouse_entered", btn2, "create_color_rect")
+		btn2.connect("mouse_exited", btn2, "close_color_rect")
+		btn3.connect("mouse_entered", btn3, "create_color_rect")
+		btn3.connect("mouse_exited", btn3, "close_color_rect")
+		btn4.connect("mouse_entered", btn4, "create_color_rect")
+		btn4.connect("mouse_exited", btn4, "close_color_rect")
+		btn5.connect("mouse_entered", btn5, "create_color_rect")
+		btn5.connect("mouse_exited", btn5, "close_color_rect")
 
 func _process(delta):
 	pass
@@ -87,3 +112,9 @@ func complete_form():
 	Global.form_complete["Возраст пациента"] = $Control/FieldAge/InputAge.text
 	Global.form_complete["Результат"] = "%.1f" % result
 	Global.form_complete["Форма"] = form
+	
+func set_font(obj):
+	obj.theme = Theme.new()
+	obj.theme.default_font = DynamicFont.new()
+	obj.theme.default_font.font_data = load("res://Source/OpenSans-Regular.ttf")
+	obj.theme.default_font.size = 12

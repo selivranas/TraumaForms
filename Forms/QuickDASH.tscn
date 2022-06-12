@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Main_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Source/Button/btn_small_dark.png" type="Texture" id=2]
@@ -166,6 +166,26 @@ content_margin_right = 2.0
 content_margin_top = 0.0
 content_margin_bottom = 0.0
 
+[sub_resource type="DynamicFont" id=97]
+size = 14
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=98]
+size = 14
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=99]
+size = 14
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=100]
+size = 14
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=101]
+size = 14
+font_data = ExtResource( 9 )
+
 [sub_resource type="StyleBoxEmpty" id=57]
 content_margin_left = 2.0
 content_margin_right = 2.0
@@ -184,8 +204,25 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
+[sub_resource type="StyleBoxFlat" id=62]
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.384314, 0.384314, 0.384314, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
 [sub_resource type="Theme" id=58]
 CheckBox/styles/focus = SubResource( 60 )
+TooltipPanel/styles/panel = SubResource( 62 )
 
 [sub_resource type="ButtonGroup" id=94]
 
@@ -195,7 +232,7 @@ CheckBox/styles/focus = SubResource( 60 )
 
 [sub_resource type="ButtonGroup" id=61]
 
-[sub_resource type="ButtonGroup" id=62]
+[sub_resource type="ButtonGroup" id=102]
 
 [sub_resource type="ButtonGroup" id=63]
 
@@ -245,7 +282,7 @@ valign = 1
 margin_left = 49.0
 margin_top = 30.0
 margin_right = 249.0
-margin_bottom = 110.0
+margin_bottom = 100.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 2 )
@@ -273,7 +310,7 @@ anchor_right = 1.0
 margin_left = -149.0
 margin_top = 30.0
 margin_right = 51.0
-margin_bottom = 110.0
+margin_bottom = 100.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 2 )
@@ -389,7 +426,6 @@ anchor_top = 0.44
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -102.12
-margin_bottom = -11.0
 size_flags_horizontal = 3
 theme = SubResource( 55 )
 custom_styles/bg = SubResource( 56 )
@@ -444,8 +480,8 @@ size_flags_horizontal = 3
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 97 )
 text = "Нетрудно"
 align = 1
 valign = 1
@@ -461,8 +497,8 @@ rect_min_size = Vector2( 98, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 98 )
 text = "Немного трудно"
 align = 1
 valign = 1
@@ -478,8 +514,8 @@ rect_min_size = Vector2( 98, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 99 )
 text = "Умеренно трудно"
 align = 1
 valign = 1
@@ -495,8 +531,8 @@ rect_min_size = Vector2( 98, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 100 )
 text = "Очень 
 трудно"
 align = 1
@@ -513,8 +549,8 @@ rect_min_size = Vector2( 98, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 101 )
 text = "Невозможно"
 align = 1
 valign = 1
@@ -548,16 +584,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question1/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control"]
@@ -569,6 +608,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 7
 theme = SubResource( 58 )
 group = SubResource( 94 )
@@ -579,6 +619,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -589,6 +630,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 7
 theme = SubResource( 58 )
 group = SubResource( 94 )
@@ -599,6 +641,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -609,6 +652,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 7
 theme = SubResource( 58 )
 group = SubResource( 94 )
@@ -619,6 +663,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -629,6 +674,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 7
 theme = SubResource( 58 )
 group = SubResource( 94 )
@@ -639,6 +685,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question1/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -649,6 +696,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 7
 theme = SubResource( 58 )
 group = SubResource( 94 )
@@ -682,16 +730,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question2/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control"]
@@ -703,6 +754,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 59 )
@@ -713,6 +765,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -723,6 +776,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 59 )
@@ -733,6 +787,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -743,6 +798,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 59 )
@@ -753,6 +809,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -763,6 +820,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 59 )
@@ -773,6 +831,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question2/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -783,6 +842,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 59 )
@@ -816,16 +876,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question3/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control"]
@@ -837,6 +900,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 95 )
@@ -847,6 +911,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -857,6 +922,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 95 )
@@ -867,6 +933,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -877,6 +944,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 95 )
@@ -887,6 +955,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -897,6 +966,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 95 )
@@ -907,6 +977,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question3/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -917,6 +988,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 95 )
@@ -950,16 +1022,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question4/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control"]
@@ -971,6 +1046,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 61 )
@@ -981,6 +1057,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -991,6 +1068,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 61 )
@@ -1001,6 +1079,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1011,6 +1090,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 61 )
@@ -1021,6 +1101,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1031,6 +1112,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 61 )
@@ -1041,6 +1123,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question4/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1051,6 +1134,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 61 )
@@ -1084,16 +1168,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question5/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control"]
@@ -1105,9 +1192,10 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
-group = SubResource( 62 )
+group = SubResource( 102 )
 align = 1
 
 [node name="Control2" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
@@ -1115,6 +1203,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1125,9 +1214,10 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
-group = SubResource( 62 )
+group = SubResource( 102 )
 align = 1
 
 [node name="Control3" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
@@ -1135,6 +1225,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1145,9 +1236,10 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
-group = SubResource( 62 )
+group = SubResource( 102 )
 align = 1
 
 [node name="Control4" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
@@ -1155,6 +1247,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1165,9 +1258,10 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
-group = SubResource( 62 )
+group = SubResource( 102 )
 align = 1
 
 [node name="Control5" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer"]
@@ -1175,6 +1269,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question5/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1185,9 +1280,10 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
-group = SubResource( 62 )
+group = SubResource( 102 )
 align = 1
 
 [node name="Question6" type="Control" parent="Control/ScrollContainer/VBoxContainer"]
@@ -1218,16 +1314,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question6/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control"]
@@ -1239,6 +1338,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 63 )
@@ -1249,6 +1349,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1259,6 +1360,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 63 )
@@ -1269,6 +1371,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1279,6 +1382,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 63 )
@@ -1289,6 +1393,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1299,6 +1404,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 63 )
@@ -1309,6 +1415,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question6/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1319,6 +1426,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 63 )
@@ -1352,16 +1460,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question7/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control"]
@@ -1373,6 +1484,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 64 )
@@ -1383,6 +1495,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1393,6 +1506,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 64 )
@@ -1403,6 +1517,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1413,6 +1528,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 64 )
@@ -1423,6 +1539,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1433,6 +1550,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 64 )
@@ -1443,6 +1561,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question7/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1453,6 +1572,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 64 )
@@ -1486,16 +1606,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question8/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control"]
@@ -1507,6 +1630,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 65 )
@@ -1517,6 +1641,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1527,6 +1652,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 65 )
@@ -1537,6 +1663,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1547,6 +1674,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 65 )
@@ -1557,6 +1685,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1567,6 +1696,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 65 )
@@ -1577,6 +1707,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question8/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1587,6 +1718,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 65 )
@@ -1620,16 +1752,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question9/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control"]
@@ -1641,6 +1776,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 66 )
@@ -1651,6 +1787,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1661,6 +1798,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 66 )
@@ -1671,6 +1809,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1681,6 +1820,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 66 )
@@ -1691,6 +1831,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1701,6 +1842,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 66 )
@@ -1711,6 +1853,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question9/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1721,6 +1864,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 66 )
@@ -1754,16 +1898,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question10/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control"]
@@ -1775,6 +1922,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 67 )
@@ -1785,6 +1933,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1795,6 +1944,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 67 )
@@ -1805,6 +1955,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1815,6 +1966,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 67 )
@@ -1825,6 +1977,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1835,6 +1988,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 67 )
@@ -1845,6 +1999,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question10/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1855,6 +2010,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 67 )
@@ -1888,16 +2044,19 @@ margin_left = -508.0
 margin_top = -20.0
 margin_right = -11.0
 margin_bottom = 20.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/ScrollContainer/VBoxContainer/Question11/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 alignment = 1
 
 [node name="Control" type="Control" parent="Control/ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer"]
 margin_right = 99.163
 margin_bottom = 40.0
 rect_min_size = Vector2( 99.163, 40 )
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="CheckBox1" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control"]
@@ -1909,6 +2068,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Нетрудно, 1 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 68 )
@@ -1919,6 +2079,7 @@ margin_left = 103.0
 margin_right = 201.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control2"]
 anchor_left = 0.5
@@ -1929,6 +2090,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Немного трудно, 2 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 68 )
@@ -1939,6 +2101,7 @@ margin_left = 205.0
 margin_right = 303.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control3"]
 anchor_left = 0.5
@@ -1949,6 +2112,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Умеренно трудно, 3 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 68 )
@@ -1959,6 +2123,7 @@ margin_left = 307.0
 margin_right = 405.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control4"]
 anchor_left = 0.5
@@ -1969,6 +2134,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Очень трудно, 4 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 68 )
@@ -1979,6 +2145,7 @@ margin_left = 409.0
 margin_right = 507.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 98, 0 )
+mouse_filter = 2
 
 [node name="CheckBox2" type="CheckBox" parent="Control/ScrollContainer/VBoxContainer/Question11/Control/HBoxContainer/Control5"]
 anchor_left = 0.5
@@ -1989,6 +2156,7 @@ margin_left = -12.0
 margin_top = -20.0
 margin_right = 12.0
 margin_bottom = 20.0
+hint_tooltip = "Невозможно, 5 б."
 size_flags_horizontal = 3
 theme = SubResource( 58 )
 group = SubResource( 68 )
@@ -2005,7 +2173,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -100.0
 margin_right = 100.0
-margin_bottom = 80.0
+margin_bottom = 70.0
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 100, 30 )
 texture_normal = ExtResource( 3 )
@@ -2034,9 +2202,9 @@ anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 0.0
 margin_left = -272.0
-margin_top = 70.0
+margin_top = 65.0
 margin_right = -50.0
-margin_bottom = 223.0
+margin_bottom = 218.0
 
 [connection signal="pressed" from="TextureRect2/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="TextureRect2/TextureButton2" to="." method="_on_TextureButton2_pressed"]

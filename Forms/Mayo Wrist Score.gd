@@ -11,6 +11,7 @@ var result = 0.0
 var answers = []
 var form = {}
 func _ready():
+	Global.info_text = "Модифицированная шкала запястья Мейо требует участия как пациента, так и врача для оценки боли, активной дуги сгибания/разгибания (по сравнению с контралатеральной стороной), силы захвата (по сравнению с контралатеральной стороной) и способности вернуться к обычному занятости или деятельности.\nОценки варьируются от 0 до 100, где 0 баллов указывает на худшее состояние запястья, а 100 — на лучшее состояние запястья."
 	for i in range(5):
 		answers.append(0)
 		var question = get_node("ScrollContainer/VBoxContainer/Parametr"+str(i+1)+"/Control/HBoxContainer/Control/OptionButton")
@@ -149,3 +150,72 @@ func complete_form():
 	Global.form_complete["Результат"] = "%s (%.1f б.)" % [result, count]
 	Global.form_complete["Форма"] = form
 	print(Global.form_complete)
+	
+	
+func create_color_rect(number):
+	yield(get_tree(),"idle_frame")
+	if !has_node("ScrollContainer/VBoxContainer/Parametr"+str(number)+"/ColorRect"):
+		var color_rect = ColorRect.new()
+		color_rect.color = Color(0.27,0.44,0.12,0.1)
+		color_rect.anchor_bottom = 1
+		color_rect.anchor_left = 0
+		color_rect.anchor_right = 1
+		color_rect.anchor_top = 0
+		color_rect.margin_bottom = 0
+		color_rect.margin_left = 0
+		color_rect.margin_right = 0
+		color_rect.margin_top = 0
+		color_rect.name = "ColorRect"
+		color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		get_node("ScrollContainer/VBoxContainer/Parametr"+str(number)).add_child(color_rect)
+		get_node("ScrollContainer/VBoxContainer/Parametr"+str(number)).move_child(get_node("ScrollContainer/VBoxContainer/Parametr"+str(number)+"/ColorRect"), 0)
+
+func close_color_rect(number, is_button = false):
+	if has_node("ScrollContainer/VBoxContainer/Parametr"+str(number)+"/ColorRect") and !is_button:
+		get_node("ScrollContainer/VBoxContainer/Parametr"+str(number)+"/ColorRect").queue_free()
+
+
+func _on_Parametr1_mouse_entered():
+	create_color_rect(1)
+func _on_Parametr1_mouse_exited():
+	close_color_rect(1)
+func _on_OptionButton1_mouse_entered():
+	create_color_rect(1)
+func _on_OptionButton1_mouse_exited():
+	close_color_rect(1)
+	
+func _on_Parametr2_mouse_entered():
+	create_color_rect(2)
+func _on_Parametr2_mouse_exited():
+	close_color_rect(2)
+func _on_OptionButton2_mouse_entered():
+	create_color_rect(2)
+func _on_OptionButton2_mouse_exited():
+	close_color_rect(2)
+
+func _on_Parametr3_mouse_entered():
+	create_color_rect(3)
+func _on_Parametr3_mouse_exited():
+	close_color_rect(3)
+func _on_OptionButton3_mouse_entered():
+	create_color_rect(3)
+func _on_OptionButton3_mouse_exited():
+	close_color_rect(3)
+
+func _on_Parametr4_mouse_entered():
+	create_color_rect(4)
+func _on_Parametr4_mouse_exited():
+	close_color_rect(4)
+func _on_OptionButton4_mouse_entered():
+	create_color_rect(4)
+func _on_OptionButton4_mouse_exited():
+	close_color_rect(4)
+
+func _on_Parametr5_mouse_entered():
+	create_color_rect(5)
+func _on_Parametr5_mouse_exited():
+	close_color_rect(5)
+func _on_OptionButton5_mouse_entered():
+	create_color_rect(5)
+func _on_OptionButton5_mouse_exited():
+	close_color_rect(5)

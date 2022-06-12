@@ -11,11 +11,37 @@ onready var check_text_info = $Description/TextDescription
 var form = {}
 
 func _ready():
+	Global.info_text = "Согласно решению II Съезда Общества кистевых хирургов РФ (15-17 мая, 2008, Россия, Санкт-Петербург) для единой оценки отдаленных результатов лечения пальцев и кисти в РФ предложено пользоваться валидной русской версией органоспецифического опросника: Опросник исходов и неспособности руки и кисти - Disability of the Arm, Shoulder and Hand Outcome Measure - DASH.\n\nШкала DASH неспособности/симптомов = ((сумма n ответов/n)-1)*25, где n равно количеству ответов"
 	set_font(self)
 	if Global.choosing_data_row != -1:
 		pass
 	get_viewport().connect("size_changed", self, "resized")
-	pass
+	#Перенести в отдельный скрипт в поле на автоподвязку и в кнопку на обработку наведения мыши
+	for i in range(30):
+		var quest = get_node("ScrollContainer/VBoxContainer/Question" + str(i+1))
+		var btn1 = quest.get_node("Control/HBoxContainer/Control/CheckBox1")
+		var btn2 = quest.get_node("Control/HBoxContainer/Control2/CheckBox2")
+		var btn3 = quest.get_node("Control/HBoxContainer/Control3/CheckBox2")
+		var btn4 = quest.get_node("Control/HBoxContainer/Control4/CheckBox2")
+		var btn5 = quest.get_node("Control/HBoxContainer/Control5/CheckBox2")
+		quest.set_script(preload("res://Forms/Question.gd"))
+		btn1.set_script(preload("res://Forms/CheckBoxCode.gd"))
+		btn2.set_script(preload("res://Forms/CheckBoxCode.gd"))
+		btn3.set_script(preload("res://Forms/CheckBoxCode.gd"))
+		btn4.set_script(preload("res://Forms/CheckBoxCode.gd"))
+		btn5.set_script(preload("res://Forms/CheckBoxCode.gd"))
+		quest.connect("mouse_entered", quest, "create_color_rect")
+		quest.connect("mouse_exited", quest, "close_color_rect")
+		btn1.connect("mouse_entered", btn1, "create_color_rect")
+		btn1.connect("mouse_exited", btn1, "close_color_rect")
+		btn2.connect("mouse_entered", btn2, "create_color_rect")
+		btn2.connect("mouse_exited", btn2, "close_color_rect")
+		btn3.connect("mouse_entered", btn3, "create_color_rect")
+		btn3.connect("mouse_exited", btn3, "close_color_rect")
+		btn4.connect("mouse_entered", btn4, "create_color_rect")
+		btn4.connect("mouse_exited", btn4, "close_color_rect")
+		btn5.connect("mouse_entered", btn5, "create_color_rect")
+		btn5.connect("mouse_exited", btn5, "close_color_rect")
 	
 func _process(delta):
 	$ScrollContainer/VBoxContainer.rect_min_size.x = $TableHeader/HBoxContainer.rect_size.x

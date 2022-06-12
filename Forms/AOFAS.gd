@@ -11,6 +11,7 @@ var result = 0.0
 var answers = []
 var form = {}
 func _ready():
+	Global.info_text = "Золотым стандартом оценки функции стопы и болевого синдрома принято считать шкалу клинической оценки заболеваний стопы и голеностопного сустава Американской Ассоциации Ортопедов Стопы и Голеностопного Сустава (AOFAS).\n \nОценка результатов хирургического лечения больных с деформациями переднего отдела стопы:\nотличный – 95–100 баллов\nхороший – 75–94 баллов\nудовлетворительный – 51–74 баллов\nплохой – 50 и менее баллов"
 	for i in range(9):
 		answers.append(0)
 		var question = get_node("ScrollContainer/VBoxContainer/Parametr"+str(i+1)+"/Control/HBoxContainer/Control/OptionButton")
@@ -191,3 +192,108 @@ func complete_form():
 	Global.form_complete["Результат"] = "%s (%.1f б.)" % [result, count]
 	Global.form_complete["Форма"] = form
 	print(Global.form_complete)
+
+
+func create_color_rect(number):
+	yield(get_tree(),"idle_frame")
+	if !has_node("ScrollContainer/VBoxContainer/Parametr"+str(number)+"/ColorRect"):
+		var color_rect = ColorRect.new()
+		color_rect.color = Color(0.27,0.44,0.12,0.1)
+		color_rect.anchor_bottom = 1
+		color_rect.anchor_left = 0
+		color_rect.anchor_right = 1
+		color_rect.anchor_top = 0
+		color_rect.margin_bottom = 0
+		color_rect.margin_left = 0
+		color_rect.margin_right = 0
+		color_rect.margin_top = 0
+		color_rect.name = "ColorRect"
+		color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		get_node("ScrollContainer/VBoxContainer/Parametr"+str(number)).add_child(color_rect)
+		get_node("ScrollContainer/VBoxContainer/Parametr"+str(number)).move_child(get_node("ScrollContainer/VBoxContainer/Parametr"+str(number)+"/ColorRect"), 0)
+
+func close_color_rect(number, is_button = false):
+	if has_node("ScrollContainer/VBoxContainer/Parametr"+str(number)+"/ColorRect") and !is_button:
+		get_node("ScrollContainer/VBoxContainer/Parametr"+str(number)+"/ColorRect").queue_free()
+
+
+func _on_Parametr1_mouse_entered():
+	create_color_rect(1)
+func _on_Parametr1_mouse_exited():
+	close_color_rect(1)
+func _on_OptionButton_mouse_entered():
+	create_color_rect(1)
+func _on_OptionButton_mouse_exited():
+	close_color_rect(1)
+	
+func _on_Parametr2_mouse_entered():
+	create_color_rect(2)
+func _on_Parametr2_mouse_exited():
+	close_color_rect(2)
+func _on_OptionButton2_mouse_entered():
+	create_color_rect(2)
+func _on_OptionButton2_mouse_exited():
+	close_color_rect(2)
+
+func _on_Parametr3_mouse_entered():
+	create_color_rect(3)
+func _on_Parametr3_mouse_exited():
+	close_color_rect(3)
+func _on_OptionButton3_mouse_entered():
+	create_color_rect(3)
+func _on_OptionButton3_mouse_exited():
+	close_color_rect(3)
+
+func _on_Parametr4_mouse_entered():
+	create_color_rect(4)
+func _on_Parametr4_mouse_exited():
+	close_color_rect(4)
+func _on_OptionButton4_mouse_entered():
+	create_color_rect(4)
+func _on_OptionButton4_mouse_exited():
+	close_color_rect(4)
+
+func _on_Parametr5_mouse_entered():
+	create_color_rect(5)
+func _on_Parametr5_mouse_exited():
+	close_color_rect(5)
+func _on_OptionButton5_mouse_entered():
+	create_color_rect(5)
+func _on_OptionButton5_mouse_exited():
+	close_color_rect(5)
+	
+func _on_Parametr6_mouse_entered():
+	create_color_rect(6)
+func _on_Parametr6_mouse_exited():
+	close_color_rect(6)
+func _on_OptionButton6_mouse_entered():
+	create_color_rect(6)
+func _on_OptionButton6_mouse_exited():
+	close_color_rect(6)
+	
+func _on_Parametr7_mouse_entered():
+	create_color_rect(7)
+func _on_Parametr7_mouse_exited():
+	close_color_rect(7)
+func _on_OptionButton7_mouse_entered():
+	create_color_rect(7)
+func _on_OptionButton7_mouse_exited():
+	close_color_rect(7)
+	
+func _on_Parametr8_mouse_entered():
+	create_color_rect(8)
+func _on_Parametr8_mouse_exited():
+	close_color_rect(8)
+func _on_OptionButton8_mouse_entered():
+	create_color_rect(8)
+func _on_OptionButton8_mouse_exited():
+	close_color_rect(8)
+
+func _on_Parametr9_mouse_entered():
+	create_color_rect(9)
+func _on_Parametr9_mouse_exited():
+	close_color_rect(9)
+func _on_OptionButton9_mouse_entered():
+	create_color_rect(9)
+func _on_OptionButton9_mouse_exited():
+	close_color_rect(9)

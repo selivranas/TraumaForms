@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Source/Button/btn_big.png" type="Texture" id=1]
 [ext_resource path="res://Source/Button/btn_big_dark.png" type="Texture" id=2]
@@ -10,10 +10,31 @@
 [ext_resource path="res://Source/Button/btn_small_dark.png" type="Texture" id=8]
 [ext_resource path="res://Source/Button/btn_small.png" type="Texture" id=9]
 [ext_resource path="res://Source/Button/btn_small_light.png" type="Texture" id=10]
+[ext_resource path="res://Source/OpenSans-Regular.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
 font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.847059, 0.772549, 0.576471, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -42,9 +63,9 @@ anchor_top = 0.5
 anchor_right = 0.761
 anchor_bottom = 0.5
 margin_left = -219.5
-margin_top = -219.5
+margin_top = -202.5
 margin_right = 220.5
-margin_bottom = 220.5
+margin_bottom = 237.5
 color = Color( 1, 0.803922, 0.713726, 1 )
 
 [node name="BorderField" type="ReferenceRect" parent="Background/FieldChoose"]
@@ -145,6 +166,17 @@ editor_only = false
 visible = false
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -13.9998, -20.9999, -14.9998, -3.99989, 5.00021, 31.0001, 8.00023, 14.0001, 10.0002, 6.00012, 7.00023, -3.99989, 2.00021, -13.9999, -7.99979, -19.9999 )
+
+[node name="Label" type="Label" parent="Background/Man/ShoulderRight"]
+visible = false
+margin_left = 9.00002
+margin_top = -25.0
+margin_right = 109.0
+margin_bottom = -8.00002
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Плечевой сустав"
 
 [node name="ShoulderLeft" type="Area2D" parent="Background/Man"]
 position = Vector2( 112.857, 145.714 )
@@ -264,6 +296,154 @@ scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -7.70285, 14.4169, -2.46411, 26.2224, 6.7037, 26.2224, 10.6328, 15.4007, 10.6328, 5.56279, 8.66824, -4.27509, -4.42865, -4.27509 )
 
+[node name="AnkleJointLeft" type="Area2D" parent="Background/Man"]
+position = Vector2( 504.489, 653.672 )
+scale = Vector2( 2.04081, 2.04081 )
+
+[node name="AnkleJointLeftFill" type="CollisionPolygon2D" parent="Background/Man/AnkleJointLeft"]
+visible = false
+polygon = PoolVector2Array( -4.99976, 14.3006, -2.89975, 23.4006, 6.20027, 23.4006, 8.30028, 19.9006, 8.30028, 13.6006, 5.50027, 6.60052, -1.49974, 6.60052 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Background/Man/AnkleJointLeft"]
+margin_left = -10.0
+margin_top = 5.0
+margin_right = 11.0
+margin_bottom = 28.0
+mouse_filter = 2
+border_width = 1.5
+editor_only = false
+
+[node name="AnkleJointLeftStroke" type="Polygon2D" parent="Background/Man/AnkleJointLeft"]
+visible = false
+position = Vector2( -0.9655, 8.94237 )
+scale = Vector2( 1.06896, 0.711537 )
+color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
+polygon = PoolVector2Array( -3.774, 7.53046, -1.80948, 20.3197, 6.70349, 20.3197, 8.66803, 15.4008, 8.66803, 6.54663, 6.04866, -3.29126, -0.499786, -3.29126 )
+
+[node name="AnkleJointRight" type="Area2D" parent="Background/Man"]
+position = Vector2( 558.775, 653.672 )
+scale = Vector2( 2.04081, 2.04081 )
+
+[node name="AnkleJointRightFill" type="CollisionPolygon2D" parent="Background/Man/AnkleJointRight"]
+visible = false
+polygon = PoolVector2Array( -6.39963, 19.2006, -4.99963, 24.1006, 2.70038, 24.1006, 4.80038, 18.5006, 4.80038, 12.2006, 2.0004, 7.3006, -4.29962, 7.3006 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Background/Man/AnkleJointRight"]
+margin_left = -10.0
+margin_top = 5.0
+margin_right = 11.0
+margin_bottom = 28.0
+mouse_filter = 2
+border_width = 1.5
+editor_only = false
+
+[node name="AnkleJointRightStroke" type="Polygon2D" parent="Background/Man/AnkleJointRight"]
+visible = false
+position = Vector2( -0.9655, 8.94237 )
+scale = Vector2( 1.06896, 0.711537 )
+color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
+polygon = PoolVector2Array( -5.08359, 14.4171, -3.77391, 21.3035, 3.42938, 21.3035, 5.39392, 13.4332, 5.39392, 4.57916, 2.77454, -2.30737, -3.11906, -2.30737 )
+
+[node name="CarpalJointLeft" type="Area2D" parent="Background/Man"]
+position = Vector2( 407.346, 303.672 )
+scale = Vector2( 2.04081, 2.04081 )
+
+[node name="CarpalJointLeftFill" type="CollisionPolygon2D" parent="Background/Man/CarpalJointLeft"]
+visible = false
+position = Vector2( 0, 0.699997 )
+polygon = PoolVector2Array( -3.59981, 14.3005, -3.59981, 17.8005, 0.60022, 19.9005, 4.80023, 19.2005, 6.20023, 16.4005, 5.50023, 11.5005, -2.1998, 10.8005 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Background/Man/CarpalJointLeft"]
+margin_left = -10.0
+margin_top = 5.0
+margin_right = 11.0
+margin_bottom = 28.0
+mouse_filter = 2
+border_width = 1.5
+editor_only = false
+
+[node name="CarpalJointLeftStroke" type="Polygon2D" parent="Background/Man/CarpalJointLeft"]
+visible = false
+position = Vector2( -0.9655, 8.94237 )
+scale = Vector2( 1.06896, 0.711537 )
+color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
+polygon = PoolVector2Array( -2.46436, 8.51416, -2.46436, 13.4331, 1.46471, 16.3845, 5.39377, 15.4007, 6.70346, 11.4655, 6.04861, 4.57901, -1.15468, 3.59521 )
+
+[node name="CarpalJointRight" type="Area2D" parent="Background/Man"]
+position = Vector2( 627.346, 305.101 )
+scale = Vector2( 2.04081, 2.04081 )
+
+[node name="CarpalJointRightFill" type="CollisionPolygon2D" parent="Background/Man/CarpalJointRight"]
+visible = false
+position = Vector2( 0, 0.699997 )
+polygon = PoolVector2Array( -5.69958, 14.3006, -3.59958, 18.5006, 1.30045, 19.2006, 5.50046, 17.1006, 6.20047, 13.6006, 4.10046, 9.40059, -4.99957, 10.1006 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Background/Man/CarpalJointRight"]
+margin_left = -10.0
+margin_top = 5.0
+margin_right = 11.0
+margin_bottom = 28.0
+mouse_filter = 2
+border_width = 1.5
+editor_only = false
+
+[node name="CarpalJointRightStroke" type="Polygon2D" parent="Background/Man/CarpalJointRight"]
+visible = false
+position = Vector2( -0.9655, 8.94237 )
+scale = Vector2( 1.06896, 0.711537 )
+color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
+polygon = PoolVector2Array( -4.42871, 8.51431, -2.46417, 14.4171, 2.11975, 15.4008, 6.0488, 12.4495, 6.70364, 7.53052, 4.73914, 1.62778, -3.77386, 2.61157 )
+
+[node name="HipJointLeft" type="Area2D" parent="Background/Man"]
+position = Vector2( 150.204, 313.673 )
+scale = Vector2( 2.04081, 2.04081 )
+
+[node name="HipJointLeftFill" type="CollisionPolygon2D" parent="Background/Man/HipJointLeft"]
+visible = false
+position = Vector2( 0, 0.699997 )
+polygon = PoolVector2Array( -9.89984, 13.6005, -8.49984, 20.6005, -0.79982, 24.8005, 9.00021, 19.9005, 10.4002, 12.9005, 3.40019, 5.20045, -4.99983, 5.20045 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Background/Man/HipJointLeft"]
+margin_left = -10.0
+margin_top = 5.0
+margin_right = 11.0
+margin_bottom = 28.0
+mouse_filter = 2
+border_width = 1.5
+editor_only = false
+
+[node name="HipJointLeftStroke" type="Polygon2D" parent="Background/Man/HipJointLeft"]
+visible = false
+position = Vector2( -0.9655, 8.94237 )
+scale = Vector2( 1.06896, 0.711537 )
+color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
+polygon = PoolVector2Array( -8.35798, 7.53033, -7.04829, 17.3682, 0.154991, 23.271, 9.32281, 16.3844, 10.6325, 6.54654, 4.08406, -4.27515, -3.77407, -4.27515 )
+
+[node name="HipJointRight" type="Area2D" parent="Background/Man"]
+position = Vector2( 233.06, 312.244 )
+scale = Vector2( 2.04081, 2.04081 )
+
+[node name="HipJointRightFill" type="CollisionPolygon2D" parent="Background/Man/HipJointRight"]
+visible = false
+position = Vector2( 0, 1.40001 )
+polygon = PoolVector2Array( -9.19958, 12.2007, -7.09957, 19.2007, 0.600449, 23.4007, 7.60047, 19.9007, 10.4005, 12.9007, 6.20047, 4.50066, -4.29957, 4.50066 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Background/Man/HipJointRight"]
+margin_left = -10.0
+margin_top = 5.0
+margin_right = 11.0
+margin_bottom = 28.0
+mouse_filter = 2
+border_width = 1.5
+editor_only = false
+
+[node name="HipJointRightStroke" type="Polygon2D" parent="Background/Man/HipJointRight"]
+visible = false
+position = Vector2( -0.9655, 8.94237 )
+scale = Vector2( 1.06896, 0.711537 )
+color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
+polygon = PoolVector2Array( -7.70288, 6.54684, -5.73835, 16.3847, 1.46494, 22.2875, 8.01337, 17.3685, 10.6328, 7.53064, 6.70369, -4.27481, -3.11897, -4.27481 )
+
 [node name="Header" type="Label" parent="Background"]
 anchor_left = 0.5
 anchor_right = 0.5
@@ -319,4 +499,22 @@ text = "Назад"
 [connection signal="input_event" from="Background/Man/ElbowLeft" to="." method="_on_ElbowLeft_input_event"]
 [connection signal="mouse_entered" from="Background/Man/ElbowLeft" to="." method="_on_ElbowLeft_mouse_entered"]
 [connection signal="mouse_exited" from="Background/Man/ElbowLeft" to="." method="_on_ElbowLeft_mouse_exited"]
+[connection signal="input_event" from="Background/Man/AnkleJointLeft" to="." method="_on_AnkleJointLeft_input_event"]
+[connection signal="mouse_entered" from="Background/Man/AnkleJointLeft" to="." method="_on_AnkleJointLeft_mouse_entered"]
+[connection signal="mouse_exited" from="Background/Man/AnkleJointLeft" to="." method="_on_AnkleJointLeft_mouse_exited"]
+[connection signal="input_event" from="Background/Man/AnkleJointRight" to="." method="_on_AnkleJointRight_input_event"]
+[connection signal="mouse_entered" from="Background/Man/AnkleJointRight" to="." method="_on_AnkleJointRight_mouse_entered"]
+[connection signal="mouse_exited" from="Background/Man/AnkleJointRight" to="." method="_on_AnkleJointRight_mouse_exited"]
+[connection signal="input_event" from="Background/Man/CarpalJointLeft" to="." method="_on_CarpalJointLeft_input_event"]
+[connection signal="mouse_entered" from="Background/Man/CarpalJointLeft" to="." method="_on_CarpalJointLeft_mouse_entered"]
+[connection signal="mouse_exited" from="Background/Man/CarpalJointLeft" to="." method="_on_CarpalJointLeft_mouse_exited"]
+[connection signal="input_event" from="Background/Man/CarpalJointRight" to="." method="_on_CarpalJointRight_input_event"]
+[connection signal="mouse_entered" from="Background/Man/CarpalJointRight" to="." method="_on_CarpalJointRight_mouse_entered"]
+[connection signal="mouse_exited" from="Background/Man/CarpalJointRight" to="." method="_on_CarpalJointRight_mouse_exited"]
+[connection signal="input_event" from="Background/Man/HipJointLeft" to="." method="_on_HipJointLeft_input_event"]
+[connection signal="mouse_entered" from="Background/Man/HipJointLeft" to="." method="_on_HipJointLeft_mouse_entered"]
+[connection signal="mouse_exited" from="Background/Man/HipJointLeft" to="." method="_on_HipJointLeft_mouse_exited"]
+[connection signal="input_event" from="Background/Man/HipJointRight" to="." method="_on_HipJointRight_input_event"]
+[connection signal="mouse_entered" from="Background/Man/HipJointRight" to="." method="_on_HipJointRight_mouse_entered"]
+[connection signal="mouse_exited" from="Background/Man/HipJointRight" to="." method="_on_HipJointRight_mouse_exited"]
 [connection signal="pressed" from="Background/ButtonBack" to="." method="_on_TextureButton_pressed"]
