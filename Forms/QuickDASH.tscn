@@ -24,7 +24,7 @@ font_data = ExtResource( 9 )
 size = 14
 font_data = ExtResource( 8 )
 
-[sub_resource type="StyleBoxFlat" id=91]
+[sub_resource type="StyleBoxFlat" id=93]
 content_margin_left = 6.0
 content_margin_right = 6.0
 content_margin_top = 3.0
@@ -61,22 +61,6 @@ corner_radius_bottom_left = 2
 size = 14
 font_data = ExtResource( 8 )
 
-[sub_resource type="StyleBoxFlat" id=93]
-content_margin_left = 6.0
-content_margin_right = 6.0
-content_margin_top = 3.0
-content_margin_bottom = 0.0
-bg_color = Color( 0.917647, 0.85098, 0.678431, 0.639216 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
 [sub_resource type="StyleBoxFlat" id=51]
 content_margin_left = 6.0
 content_margin_right = 6.0
@@ -104,7 +88,7 @@ content_margin_right = 70.0
 content_margin_top = 20.0
 content_margin_bottom = 20.0
 
-[sub_resource type="StyleBoxFlat" id=17]
+[sub_resource type="StyleBoxFlat" id=103]
 bg_color = Color( 0.270588, 0.439216, 0.117647, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -116,7 +100,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id=18]
+[sub_resource type="StyleBoxFlat" id=104]
 bg_color = Color( 0.490196, 0.670588, 0.321569, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -128,7 +112,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id=19]
+[sub_resource type="StyleBoxFlat" id=105]
 bg_color = Color( 0.2, 0.360784, 0.0588235, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -140,7 +124,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id=47]
+[sub_resource type="StyleBoxFlat" id=106]
 bg_color = Color( 0.847059, 0.772549, 0.576471, 1 )
 border_width_left = 10
 border_width_top = 5
@@ -148,10 +132,10 @@ border_width_bottom = 5
 border_color = Color( 0.847059, 0.772549, 0.576471, 1 )
 
 [sub_resource type="Theme" id=55]
-VScrollBar/styles/grabber = SubResource( 17 )
-VScrollBar/styles/grabber_highlight = SubResource( 18 )
-VScrollBar/styles/grabber_pressed = SubResource( 19 )
-VScrollBar/styles/scroll = SubResource( 47 )
+VScrollBar/styles/grabber = SubResource( 103 )
+VScrollBar/styles/grabber_highlight = SubResource( 104 )
+VScrollBar/styles/grabber_pressed = SubResource( 105 )
+VScrollBar/styles/scroll = SubResource( 106 )
 VScrollBar/styles/scroll_focus = null
 
 [sub_resource type="StyleBoxEmpty" id=56]
@@ -192,7 +176,7 @@ content_margin_right = 2.0
 content_margin_top = 0.0
 content_margin_bottom = 0.0
 
-[sub_resource type="StyleBoxFlat" id=60]
+[sub_resource type="StyleBoxFlat" id=147]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 border_width_left = 1
 border_width_top = 1
@@ -204,7 +188,19 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id=62]
+[sub_resource type="StyleBoxFlat" id=148]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=149]
 content_margin_left = 4.0
 content_margin_right = 4.0
 content_margin_top = 2.0
@@ -221,8 +217,9 @@ corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
 [sub_resource type="Theme" id=58]
-CheckBox/styles/focus = SubResource( 60 )
-TooltipPanel/styles/panel = SubResource( 62 )
+CheckBox/styles/focus = SubResource( 147 )
+CheckBox/styles/hover = SubResource( 148 )
+TooltipPanel/styles/panel = SubResource( 149 )
 
 [sub_resource type="ButtonGroup" id=94]
 
@@ -367,7 +364,7 @@ theme = SubResource( 92 )
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 48 )
-custom_styles/focus = SubResource( 91 )
+custom_styles/focus = SubResource( 93 )
 custom_styles/normal = SubResource( 49 )
 
 [node name="FieldAge" type="Control" parent="Control"]
@@ -426,6 +423,7 @@ anchor_top = 0.44
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -102.12
+margin_bottom = 1.0
 size_flags_horizontal = 3
 theme = SubResource( 55 )
 custom_styles/bg = SubResource( 56 )
@@ -2204,7 +2202,7 @@ anchor_bottom = 0.0
 margin_left = -272.0
 margin_top = 65.0
 margin_right = -50.0
-margin_bottom = 218.0
+margin_bottom = 216.0
 
 [connection signal="pressed" from="TextureRect2/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="TextureRect2/TextureButton2" to="." method="_on_TextureButton2_pressed"]

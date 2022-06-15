@@ -11,6 +11,7 @@ var result = 0.0
 var answers = []
 var form = {}
 func _ready():
+	name = $TextureRect2/Label.text
 	Global.info_text = "Золотым стандартом оценки функции стопы и болевого синдрома принято считать шкалу клинической оценки заболеваний стопы и голеностопного сустава Американской Ассоциации Ортопедов Стопы и Голеностопного Сустава (AOFAS).\n \nОценка результатов хирургического лечения больных с деформациями переднего отдела стопы:\nотличный – 95–100 баллов\nхороший – 75–94 баллов\nудовлетворительный – 51–74 баллов\nплохой – 50 и менее баллов"
 	for i in range(9):
 		answers.append(0)
@@ -18,7 +19,12 @@ func _ready():
 		question.connect("item_selected",self,"_on_OptionButton"+str(i+1)+"_item_selected")
 		#call_deferred("_on_OptionButton"+str(i+1)+"_item_selected", 1)
 	if Global.choosing_data_row != -1:
-		pass
+		var check_data = Global.getting_data[Global.choosing_data_row]
+		name_text.text = check_data["ФИО пациента"]
+		age_text.text = check_data["Возраст пациента"]
+		for i in range(9):
+			get_node("ScrollContainer/VBoxContainer/Parametr"+str(i+1)+"/Control/HBoxContainer/Control/OptionButton").selected = int(check_data["Q" + str(i+1)])
+			call_deferred("_on_OptionButton"+str(i+1)+"_item_selected", int(check_data["Q" + str(i+1)]))
 	
 
 func _on_OptionButton1_item_selected(index):

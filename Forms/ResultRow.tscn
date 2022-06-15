@@ -18,8 +18,8 @@ rect_min_size = Vector2( 950, 50 )
 script = ExtResource( 2 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 950.0
 
 [node name="NumberRow" type="Control" parent="HBoxContainer"]
 margin_right = 50.0
@@ -40,15 +40,18 @@ valign = 1
 
 [node name="NameRow" type="Control" parent="HBoxContainer"]
 margin_left = 54.0
-margin_right = 254.0
+margin_right = 354.0
 margin_bottom = 50.0
-rect_min_size = Vector2( 200, 50 )
+rect_min_size = Vector2( 300, 50 )
 
 [node name="Label" type="Label" parent="HBoxContainer/NameRow"]
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
+margin_left = -150.0
 margin_top = -10.0
+margin_right = 150.0
 margin_bottom = 10.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
@@ -57,33 +60,37 @@ align = 1
 valign = 1
 
 [node name="AgeRow" type="Control" parent="HBoxContainer"]
-margin_left = 258.0
-margin_right = 308.0
+margin_left = 358.0
+margin_right = 478.0
 margin_bottom = 50.0
-rect_min_size = Vector2( 50, 50 )
+rect_min_size = Vector2( 120, 50 )
 
 [node name="Label" type="Label" parent="HBoxContainer/AgeRow"]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
+margin_left = -4.0
 margin_top = -10.0
+margin_right = 1.0
 margin_bottom = 10.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
-text = "Age"
+text = "Возраст"
 align = 1
 valign = 1
 
 [node name="DateRow" type="Control" parent="HBoxContainer"]
-margin_left = 312.0
-margin_right = 512.0
+margin_left = 482.0
+margin_right = 632.0
 margin_bottom = 50.0
-rect_min_size = Vector2( 200, 50 )
+rect_min_size = Vector2( 150, 50 )
 
 [node name="Label" type="Label" parent="HBoxContainer/DateRow"]
+anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
+margin_left = -150.0
 margin_top = -10.0
 margin_bottom = 10.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -93,16 +100,19 @@ align = 1
 valign = 1
 
 [node name="ResultRow" type="Control" parent="HBoxContainer"]
-margin_left = 516.0
-margin_right = 716.0
+margin_left = 636.0
+margin_right = 786.0
 margin_bottom = 50.0
-rect_min_size = Vector2( 200, 50 )
+rect_min_size = Vector2( 150, 50 )
 
 [node name="Label" type="Label" parent="HBoxContainer/ResultRow"]
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
+margin_left = -75.0
 margin_top = -10.0
+margin_right = 75.0
 margin_bottom = 10.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
@@ -111,10 +121,10 @@ align = 1
 valign = 1
 
 [node name="Variable" type="Control" parent="HBoxContainer"]
-margin_left = 720.0
-margin_right = 920.0
+margin_left = 790.0
+margin_right = 940.0
 margin_bottom = 50.0
-rect_min_size = Vector2( 200, 50 )
+rect_min_size = Vector2( 150, 50 )
 
 [node name="ButtonBack" type="TextureButton" parent="HBoxContainer/Variable"]
 visible = false
@@ -149,14 +159,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="HBoxContainer/Variable"]
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
+margin_left = -50.0
 margin_top = -10.0
+margin_right = 50.0
 margin_bottom = 10.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
-text = "Варианты действий"
+text = "Действие"
 align = 1
 valign = 1
 

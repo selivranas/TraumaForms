@@ -3,6 +3,7 @@ extends Control
 onready var form_list = $Background/FormList
 onready var data_list = $Background/DataList/DataRow
 onready var error_label = $Background/Error
+onready var filter_name = $Background/Filter1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for i in Global.forms:
@@ -12,6 +13,7 @@ func _ready():
 
 
 func _on_FormList_item_selected(index):
+	filter_name.text = ""
 	Global.choosing_data_row = -1
 	error_label.visible = false
 	var form_name = form_list.get_item_text(index)
@@ -42,3 +44,23 @@ func _on_FormList_item_selected(index):
 
 func _on_ButtonBack_pressed():
 	get_tree().change_scene("res://GUI/MainTraumaScene.tscn")
+
+
+func _on_Filter1_text_changed(new_text):
+	if len(new_text) != 0 and len(Global.getting_data) != 0:
+		for row in data_list.get_children():
+			row.queue_free()
+		var header = preload("res://Forms/ResultRow.tscn").instance()
+		data_list.add_child(header)
+		for i in len(Global.getting_data):
+			if Global.getting_data[i]["ФИО пациента"].to_lower().find(new_text.to_lower()) != -1:
+				var data_row = preload("res://Forms/ResultRow.tscn").instance()
+				data_list.add_child(data_row)
+				var name_pacient = Global.getting_data[i]["ФИО пациента"]
+				var age_pacient = Global.getting_data[i]["Возраст пациента"]
+				var date_pacient = OS.get_datetime_from_unix_time(int(Global.getting_data[i]["Дата заполнения"]))
+				var text_date =  "%s.%s.%s %s:%s:%s" % [date_pacient["day"], date_pacient["month"], date_pacient["year"], date_pacient["hour"], date_pacient["minute"], date_pacient["second"]]
+				var result_pacient = Global.getting_data[i]["Результат"]
+				data_row.set_data(i+1, name_pacient, age_pacient, text_date, result_pacient)
+	else:
+		_on_FormList_item_selected(form_list.selected)

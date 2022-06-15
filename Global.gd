@@ -17,7 +17,7 @@ var chapter_2_link = ["res://Forms/AOFAS.tscn", "res://Forms/Mazur.tscn"]
 var chapter_3 = ["Шкала Майя"]
 var chapter_3_link = ["res://Forms/Mayo Wrist Score.tscn"]
 var chapter_4 = ["Бостонский опросник по карпальному каналу", "Ванкуверская шкала оценки рубцов", "Опросник Gilberts при болезни Нотта"]
-var chapter_4_link = ["res://Forms/Form6.tscn", "res://Forms/Form7.tscn", "res://Forms/Form8.tscn"]
+var chapter_4_link = ["res://Forms/SSS&FSS.tscn", "res://Forms/VSS.tscn", "res://Forms/Gilberts.tscn"]
 var chapter_5 = ["Опросник KOOS", "Шкала IKDS 2000", "Шкала Lisholm"]
 var chapter_5_link = ["res://Forms/Form10.tscn", "res://Forms/Form5.tscn", "res://Forms/Form9.tscn"]
 var chapter_6 = ["Индекс Мейо"]
@@ -35,7 +35,7 @@ var chapter_11_link = ["res://Forms/Form21.tscn"]
 var chapter_12 = ["Harris Hip Score"]
 var chapter_12_link = ["res://Forms/Form25.tscn"]
 
-var choosing_data_row = 0
+var choosing_data_row = -1
 
 var info_text = ""
 

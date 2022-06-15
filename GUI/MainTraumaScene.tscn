@@ -159,6 +159,7 @@ margin_top = -19.0
 margin_right = 8.0
 margin_bottom = 31.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -192,6 +193,7 @@ margin_top = -19.0
 margin_right = 8.0
 margin_bottom = 31.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -199,6 +201,17 @@ editor_only = false
 visible = false
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -6.99979, -9.99992, -11.9998, -1.99991, -12.9998, 31.0001, -1.99979, 18.0001, 7.00022, 5.00009, 7.00023, -3.99989, 7.00022, -16.9999, -0.999786, -15.9999 )
+
+[node name="Label" type="Label" parent="Background/Man/ShoulderLeft"]
+visible = false
+margin_left = 9.00002
+margin_top = -25.0
+margin_right = 109.0
+margin_bottom = -8.00002
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Плечевой сустав"
 
 [node name="KneeRight" type="Area2D" parent="Background/Man"]
 position = Vector2( 227.142, 498.571 )
@@ -214,6 +227,7 @@ margin_top = -6.0
 margin_right = 14.0
 margin_bottom = 30.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -223,6 +237,17 @@ position = Vector2( -0.9655, 8.94237 )
 scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -12.1933, -11.162, -14.9998, -1.32422, -13.1288, 28.1894, -0.0319977, 28.1894, -0.0319977, 28.1894, 9.32288, -2.72961, 3.70995, -19.5945, -9.38687, -19.5945 )
+
+[node name="Label" type="Label" parent="Background/Man/KneeRight"]
+visible = false
+margin_left = 9.00002
+margin_top = -25.0
+margin_right = 109.0
+margin_bottom = -8.00002
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Коленный сустав"
 
 [node name="KneeLeft" type="Area2D" parent="Background/Man"]
 position = Vector2( 160.203, 485.101 )
@@ -238,6 +263,7 @@ margin_top = 4.0
 margin_right = 11.0
 margin_bottom = 30.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -247,6 +273,18 @@ position = Vector2( -0.9655, 8.94237 )
 scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -7.04794, 5.56271, -7.04794, 8.51407, -5.08342, 29.1736, 4.08437, 29.1736, 5.39405, 7.53027, 3.42952, -1.32379, 1.465, -7.22653, -6.3931, -7.22653 )
+
+[node name="Label" type="Label" parent="Background/Man/KneeLeft"]
+visible = false
+margin_left = 9.00002
+margin_top = -14.0
+margin_right = 109.0
+margin_bottom = -8.00002
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Коленный сустав"
 
 [node name="ElbowRight" type="Area2D" parent="Background/Man"]
 position = Vector2( 611.632, 215.101 )
@@ -262,6 +300,7 @@ margin_top = 5.0
 margin_right = 11.0
 margin_bottom = 28.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -271,6 +310,18 @@ position = Vector2( -0.9655, 8.94237 )
 scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -7.70285, 14.4169, -2.46411, 26.2224, 6.7037, 26.2224, 10.6328, 15.4007, 10.6328, 5.56279, 8.66824, -4.27509, -4.42865, -4.27509 )
+
+[node name="Label" type="Label" parent="Background/Man/ElbowRight"]
+visible = false
+margin_left = 9.00002
+margin_top = -11.0
+margin_right = 109.0
+margin_bottom = -8.00002
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Локтевой сустав"
 
 [node name="ElbowLeft" type="Area2D" parent="Background/Man"]
 position = Vector2( 431.632, 215.101 )
@@ -286,6 +337,7 @@ margin_top = 5.0
 margin_right = 11.0
 margin_bottom = 28.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -295,6 +347,18 @@ position = Vector2( -0.9655, 8.94237 )
 scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -7.70285, 14.4169, -2.46411, 26.2224, 6.7037, 26.2224, 10.6328, 15.4007, 10.6328, 5.56279, 8.66824, -4.27509, -4.42865, -4.27509 )
+
+[node name="Label" type="Label" parent="Background/Man/ElbowLeft"]
+visible = false
+margin_left = 9.00002
+margin_top = -11.0
+margin_right = 109.0
+margin_bottom = -8.00002
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Локтевой сустав"
 
 [node name="AnkleJointLeft" type="Area2D" parent="Background/Man"]
 position = Vector2( 504.489, 653.672 )
@@ -310,6 +374,7 @@ margin_top = 5.0
 margin_right = 11.0
 margin_bottom = 28.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -319,6 +384,18 @@ position = Vector2( -0.9655, 8.94237 )
 scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -3.774, 7.53046, -1.80948, 20.3197, 6.70349, 20.3197, 8.66803, 15.4008, 8.66803, 6.54663, 6.04866, -3.29126, -0.499786, -3.29126 )
+
+[node name="Label" type="Label" parent="Background/Man/AnkleJointLeft"]
+visible = false
+margin_left = 9.00002
+margin_top = -12.0
+margin_right = 109.0
+margin_bottom = -8.00002
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Голеностопный сустав"
 
 [node name="AnkleJointRight" type="Area2D" parent="Background/Man"]
 position = Vector2( 558.775, 653.672 )
@@ -334,6 +411,7 @@ margin_top = 5.0
 margin_right = 11.0
 margin_bottom = 28.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -343,6 +421,18 @@ position = Vector2( -0.9655, 8.94237 )
 scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -5.08359, 14.4171, -3.77391, 21.3035, 3.42938, 21.3035, 5.39392, 13.4332, 5.39392, 4.57916, 2.77454, -2.30737, -3.11906, -2.30737 )
+
+[node name="Label" type="Label" parent="Background/Man/AnkleJointRight"]
+visible = false
+margin_left = 9.00002
+margin_top = -12.0
+margin_right = 109.0
+margin_bottom = -8.00002
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Голеностопный сустав"
 
 [node name="CarpalJointLeft" type="Area2D" parent="Background/Man"]
 position = Vector2( 407.346, 303.672 )
@@ -359,6 +449,7 @@ margin_top = 5.0
 margin_right = 11.0
 margin_bottom = 28.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -368,6 +459,18 @@ position = Vector2( -0.9655, 8.94237 )
 scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -2.46436, 8.51416, -2.46436, 13.4331, 1.46471, 16.3845, 5.39377, 15.4007, 6.70346, 11.4655, 6.04861, 4.57901, -1.15468, 3.59521 )
+
+[node name="Label" type="Label" parent="Background/Man/CarpalJointLeft"]
+visible = false
+margin_left = 9.00002
+margin_top = -12.0
+margin_right = 109.0
+margin_bottom = -8.00002
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Кистевой сустав"
 
 [node name="CarpalJointRight" type="Area2D" parent="Background/Man"]
 position = Vector2( 627.346, 305.101 )
@@ -384,6 +487,7 @@ margin_top = 5.0
 margin_right = 11.0
 margin_bottom = 28.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -393,6 +497,18 @@ position = Vector2( -0.9655, 8.94237 )
 scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -4.42871, 8.51431, -2.46417, 14.4171, 2.11975, 15.4008, 6.0488, 12.4495, 6.70364, 7.53052, 4.73914, 1.62778, -3.77386, 2.61157 )
+
+[node name="Label" type="Label" parent="Background/Man/CarpalJointRight"]
+visible = false
+margin_left = 9.00002
+margin_top = -9.0
+margin_right = 109.0
+margin_bottom = -8.00002
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Кистевой сустав"
 
 [node name="HipJointLeft" type="Area2D" parent="Background/Man"]
 position = Vector2( 150.204, 313.673 )
@@ -409,6 +525,7 @@ margin_top = 5.0
 margin_right = 11.0
 margin_bottom = 28.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -418,6 +535,18 @@ position = Vector2( -0.9655, 8.94237 )
 scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -8.35798, 7.53033, -7.04829, 17.3682, 0.154991, 23.271, 9.32281, 16.3844, 10.6325, 6.54654, 4.08406, -4.27515, -3.77407, -4.27515 )
+
+[node name="Label" type="Label" parent="Background/Man/HipJointLeft"]
+visible = false
+margin_left = 9.00002
+margin_top = -9.0
+margin_right = 109.0
+margin_bottom = -8.00002
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Тазобедренный сустав"
 
 [node name="HipJointRight" type="Area2D" parent="Background/Man"]
 position = Vector2( 233.06, 312.244 )
@@ -434,6 +563,7 @@ margin_top = 5.0
 margin_right = 11.0
 margin_bottom = 28.0
 mouse_filter = 2
+border_color = Color( 1, 0, 0, 0.470588 )
 border_width = 1.5
 editor_only = false
 
@@ -443,6 +573,18 @@ position = Vector2( -0.9655, 8.94237 )
 scale = Vector2( 1.06896, 0.711537 )
 color = Color( 0.85098, 0.85098, 0.85098, 0.584314 )
 polygon = PoolVector2Array( -7.70288, 6.54684, -5.73835, 16.3847, 1.46494, 22.2875, 8.01337, 17.3685, 10.6328, 7.53064, 6.70369, -4.27481, -3.11897, -4.27481 )
+
+[node name="Label" type="Label" parent="Background/Man/HipJointRight"]
+visible = false
+margin_left = 9.00002
+margin_top = -9.0
+margin_right = 109.0
+margin_bottom = -8.00002
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Тазобедренный сустав"
 
 [node name="Header" type="Label" parent="Background"]
 anchor_left = 0.5
@@ -459,7 +601,7 @@ text = "Травматологическое направление"
 margin_left = 40.0
 margin_top = 25.0
 margin_right = 240.0
-margin_bottom = 105.0
+margin_bottom = 95.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 8 )

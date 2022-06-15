@@ -11,10 +11,31 @@ onready var check_text_info = $Control/Description/TextDescription
 var form = {}
 
 func _ready():
+	name = $TextureRect2/Label.text
 	Global.info_text = "Quick DASH (Disabilities of the Arm, Shoulder and Hand) - опросник влияния синдрома карпального канала на функцию руки.\nШкала DASH неспособности/симптомов = ((сумма n ответов/n)-1)*25, где n равно количеству ответов.\nQuickDASH не может быть подсчитана, если пропущено более 1 пункта."
 	set_font(self)
 	if Global.choosing_data_row != -1:
-		pass
+		var check_data = Global.getting_data[Global.choosing_data_row]
+		$Control/FieldFullname/InputFullname.text = check_data["ФИО пациента"]
+		$Control/FieldAge/InputAge.text = check_data["Возраст пациента"]
+		for i in range(11):
+			var quest = get_node("Control/ScrollContainer/VBoxContainer/Question" + str(i+1))
+			var btn1 = quest.get_node("Control/HBoxContainer/Control/CheckBox1")
+			var btn2 = quest.get_node("Control/HBoxContainer/Control2/CheckBox2")
+			var btn3 = quest.get_node("Control/HBoxContainer/Control3/CheckBox2")
+			var btn4 = quest.get_node("Control/HBoxContainer/Control4/CheckBox2")
+			var btn5 = quest.get_node("Control/HBoxContainer/Control5/CheckBox2")
+			var chech_num_answer = int(check_data["Q" + str(i+1)])
+			if chech_num_answer == 1:
+				btn1.pressed = true
+			elif chech_num_answer == 2:
+				btn2.pressed = true
+			elif chech_num_answer == 3:
+				btn3.pressed = true
+			elif chech_num_answer == 4:
+				btn4.pressed = true
+			elif chech_num_answer == 5:
+				btn5.pressed = true
 	for i in range(11):
 		var quest = get_node("Control/ScrollContainer/VBoxContainer/Question" + str(i+1))
 		var btn1 = quest.get_node("Control/HBoxContainer/Control/CheckBox1")
@@ -118,3 +139,4 @@ func set_font(obj):
 	obj.theme.default_font = DynamicFont.new()
 	obj.theme.default_font.font_data = load("res://Source/OpenSans-Regular.ttf")
 	obj.theme.default_font.size = 12
+
