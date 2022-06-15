@@ -128,7 +128,7 @@ func _on_ElbowLeft_mouse_exited():
 func _on_AnkleJointLeft_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		Global.from_whose = 0
-		get_tree().change_scene("res://Forms/Form24.tscn")
+		get_tree().change_scene("res://Forms/AOFAS.tscn")
 
 
 func _on_AnkleJointLeft_mouse_entered():
@@ -146,7 +146,7 @@ func _on_AnkleJointLeft_mouse_exited():
 func _on_AnkleJointRight_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		Global.from_whose = 0
-		get_tree().change_scene("res://Forms/Form24.tscn")
+		get_tree().change_scene("res://Forms/AOFAS.tscn")
 
 
 func _on_AnkleJointRight_mouse_entered():
