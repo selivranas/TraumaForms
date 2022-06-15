@@ -7,10 +7,15 @@ var missing_quest = 0
 var result = 0.0
 
 onready var check_text_info = $Description/TextDescription
+onready var name_text = $FieldFullname/InputFullname
+onready var age_text = $FieldAge/InputAge
 
 var form = {}
 
 func _ready():
+	if OS.get_name() == "Android":
+		name_text.text = Global.global_name
+		age_text.text = Global.global_age
 	name = $TextureRect2/Label.text
 	Global.info_text = "Согласно решению II Съезда Общества кистевых хирургов РФ (15-17 мая, 2008, Россия, Санкт-Петербург) для единой оценки отдаленных результатов лечения пальцев и кисти в РФ предложено пользоваться валидной русской версией органоспецифического опросника: Опросник исходов и неспособности руки и кисти - Disability of the Arm, Shoulder and Hand Outcome Measure - DASH.\n\nШкала DASH неспособности/симптомов = ((сумма n ответов/n)-1)*25, где n равно количеству ответов"
 	set_font(self)
@@ -131,8 +136,8 @@ func _on_ButtonOk_pressed():
 func complete_form():
 	Global.form_complete["Анкета"] = "DASH"
 	Global.form_complete["Дата заполнения"] = OS.get_unix_time()
-	Global.form_complete["ФИО пациента"] = $FieldFullname/InputFullname.text
-	Global.form_complete["Возраст пациента"] = $FieldAge/InputAge.text
+	Global.form_complete["ФИО пациента"] = name_text.text
+	Global.form_complete["Возраст пациента"] = age_text.text
 	Global.form_complete["Результат"] = "%.1f" % result
 	Global.form_complete["Форма"] = form
 

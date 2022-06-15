@@ -11,6 +11,9 @@ var result = 0.0
 var answers = []
 var form = {}
 func _ready():
+	if OS.get_name() == "Android":
+		name_text.text = Global.global_name
+		age_text.text = Global.global_age
 	name = $TextureRect2/Label.text
 	Global.info_text = "Ванкуверская шкала оценки рубцов (Vancouver Scar Scale,VSS) была впервые предложена Sullivan и соавт. в 1990 г. Это наиболее известная и широко используемая шкала для оценки послеожоговых рубцов как в рутинной практике, так и в клинических исследованиях. Она подразумевает оценку четырех параметров: васкуляризации, высоты/толщины, эластичности и пигментации. Чем выше оценка, тем хуже состояние рубца."
 	for i in range(4):

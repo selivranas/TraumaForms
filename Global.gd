@@ -1,5 +1,8 @@
 extends Node
 
+var global_name = ""
+var global_age = ""
+
 var form_complete = {}
 var from_whose = 0
 

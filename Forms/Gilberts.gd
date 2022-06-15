@@ -7,10 +7,15 @@ var missing_quest = 0
 var result = 0.0
 
 onready var check_text_info = $Control/Description/TextDescription
+onready var name_text = $FieldFullname/InputFullname
+onready var age_text = $FieldAge/InputAge
 
 var form = {}
 
 func _ready():
+	if OS.get_name() == "Android":
+		name_text.text = Global.global_name
+		age_text.text = Global.global_age
 	name = $TextureRect2/Label.text
 	Global.info_text = "Болезнь Нотта (стенозирующий лигаментит) — заболевание опорно-двигательной системы, способное приводить к полному обездвиживанию пальца. Jпросник Gilberts создан для оценки отдаленных результатов лечения."
 	if Global.choosing_data_row != -1:
@@ -94,8 +99,8 @@ func _on_ButtonOk_pressed():
 func complete_form():
 	Global.form_complete["Анкета"] = name
 	Global.form_complete["Дата заполнения"] = OS.get_unix_time()
-	Global.form_complete["ФИО пациента"] = $Control/FieldFullname/InputFullname.text
-	Global.form_complete["Возраст пациента"] = $Control/FieldAge/InputAge.text
+	Global.form_complete["ФИО пациента"] = name_text.text
+	Global.form_complete["Возраст пациента"] = age_text.text
 	Global.form_complete["Результат"] = result
 	Global.form_complete["Форма"] = form
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Source/Button/btn_big.png" type="Texture" id=1]
 [ext_resource path="res://Source/nice.png" type="Texture" id=2]
@@ -6,10 +6,93 @@
 [ext_resource path="res://Source/Button/btn_big_light.png" type="Texture" id=4]
 [ext_resource path="res://Source/OpenSans-Bold.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://GUI/StartScene.gd" type="Script" id=6]
+[ext_resource path="res://Main_font.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Source/OpenSans-Regular.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
 font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 14
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 3.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.917647, 0.85098, 0.678431, 0.639216 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 3.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.960784, 0.945098, 0.894118, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="DynamicFont" id=5]
+size = 14
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 3.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.917647, 0.85098, 0.678431, 0.639216 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 3.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.960784, 0.945098, 0.894118, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.866667, 0.462745, 0.192157, 1 )
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="DynamicFont" id=9]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 8 )
 
 [node name="StartMenu" type="Control"]
 anchor_right = 1.0
@@ -24,6 +107,7 @@ texture = ExtResource( 2 )
 expand = true
 
 [node name="FieldChoose" type="ColorRect" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -91,5 +175,209 @@ custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "ТРАВМАТОЛОГИЯ"
 
+[node name="FieldChoose2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 14.0
+margin_top = -219.0
+margin_right = 454.0
+margin_bottom = 221.0
+color = Color( 1, 0.803922, 0.713726, 1 )
+
+[node name="BorderFieldChoose" type="ReferenceRect" parent="FieldChoose2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 0.847059, 0.772549, 0.576471, 1 )
+border_width = 1.5
+editor_only = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ButtonOrtopedy" type="TextureButton" parent="FieldChoose2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -157.5
+margin_top = -126.5
+margin_right = 475.5
+margin_bottom = 20.5
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+
+[node name="NameButtonOrtopedy" type="Label" parent="FieldChoose2/ButtonOrtopedy"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -133.0
+margin_top = -27.5
+margin_right = 133.0
+margin_bottom = 27.5
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "ОРТОПЕДИЯ"
+
+[node name="ButtonTrauma" type="TextureButton" parent="FieldChoose2"]
+margin_left = 62.5
+margin_top = 272.5
+margin_right = 695.5
+margin_bottom = 419.5
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+
+[node name="NameButtonTrauma" type="Label" parent="FieldChoose2/ButtonTrauma"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = -27.5
+margin_right = 184.0
+margin_bottom = 27.5
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "ТРАВМАТОЛОГИЯ"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -430.0
+margin_top = -218.5
+margin_right = -49.0
+margin_bottom = 221.5
+color = Color( 1, 0.803922, 0.713726, 1 )
+
+[node name="FieldFullname" type="Control" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.0
+margin_top = -58.5
+margin_right = 126.0
+margin_bottom = -7.5
+
+[node name="TextFullname" type="Label" parent="ColorRect/FieldFullname"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -49.0
+margin_top = 11.0
+margin_right = 49.0
+margin_bottom = 31.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Введите ФИО:"
+
+[node name="InputFullname" type="LineEdit" parent="ColorRect/FieldFullname"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = 9.0
+margin_right = 150.0
+margin_bottom = 39.0
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+
+[node name="FieldAge" type="Control" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.0
+margin_top = 7.5
+margin_right = 126.0
+margin_bottom = 60.5
+
+[node name="TextAge" type="Label" parent="ColorRect/FieldAge"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -59.5
+margin_top = 11.0
+margin_right = 59.5
+margin_bottom = 31.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Введите возраст:"
+
+[node name="InputAge" type="LineEdit" parent="ColorRect/FieldAge"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = 11.0
+margin_right = 60.0
+margin_bottom = 41.0
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -94.5
+margin_top = 27.5
+margin_right = 94.5
+margin_bottom = 58.5
+rect_pivot_offset = Vector2( 154, 12 )
+custom_colors/font_color = Color( 0.270588, 0.439216, 0.117647, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Здравствуйте!"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -171.0
+margin_top = 71.0
+margin_right = 171.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 154, 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Вы можете ввести свои данные 
+для работы с формами"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -94.5
+margin_top = -82.5
+margin_right = 94.5
+margin_bottom = -33.5
+rect_pivot_offset = Vector2( 154, 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Данные автоматически
+сохраняются"
+align = 1
+valign = 1
+
 [connection signal="pressed" from="FieldChoose/ButtonOrtopedy" to="." method="_on_ButtonOrtopedy_pressed"]
 [connection signal="pressed" from="FieldChoose/ButtonTrauma" to="." method="_on_ButtonTrauma_pressed"]
+[connection signal="pressed" from="FieldChoose2/ButtonOrtopedy" to="." method="_on_ButtonOrtopedy_pressed"]
+[connection signal="pressed" from="FieldChoose2/ButtonTrauma" to="." method="_on_ButtonTrauma_pressed"]
+[connection signal="text_changed" from="ColorRect/FieldFullname/InputFullname" to="." method="_on_InputFullname_text_changed"]
+[connection signal="text_changed" from="ColorRect/FieldAge/InputAge" to="." method="_on_InputAge_text_changed"]

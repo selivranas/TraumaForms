@@ -12,6 +12,9 @@ var result = 0.0
 var answers = []
 var form = {}
 func _ready():
+	if OS.get_name() == "Android":
+		name_text.text = Global.global_name
+		age_text.text = Global.global_age
 	name = $TextureRect2/Label.text
 	Global.info_text = "Шкала Mazur для оценки результатов лечения переломов пилона.\n\nИнтерпретация результатов:\n80-100 баллов – отлично;\n0-79 баллов – хорошо;\n60-69 баллов – удовлетворительно;\nменее 60 баллов - плохо."
 	for i in range(12):
